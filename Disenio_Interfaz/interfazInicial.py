@@ -80,7 +80,8 @@ def save_screenshot():
 
     # Guarda la imagen en un archivo
     texto = str(text_frame_grafica.get("1.0",'end-1c'))
-    image.save(texto + ".png")
+    file_path = filedialog.asksaveasfilename(defaultextension=".png", initialfile= texto + ".png", filetypes=(("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
+    image.save(file_path)
 
 # Crea el botón
 save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
