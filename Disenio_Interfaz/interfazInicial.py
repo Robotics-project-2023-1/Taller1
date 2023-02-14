@@ -30,7 +30,7 @@ canvas.pack()
 
 # canvas.create_image(10,10,anchor=tk.NW,image=new_image)
 
-# img = Image.open("gato.jpg")
+# img = Image.open("gato.png")
 # imagen = img.resize((400,400))
 # new_image = ImageTk.PhotoImage(imagen)
 canvas.create_image(pos_x,pos_y,image=new_image)
@@ -73,8 +73,11 @@ def save_screenshot():
     
     # # para ubuntu:
     # # Crea una imagen a partir de la ventana actual
+    ####### hacer estos pasos en consola para que funcione:
     # # 1. $ sudo nano /etc/gdm3/custom.conf
     # # 2. $ WaylandEnable=false
+    # # 3. guardar los cambios
+    # # 4. $ sudo systemctl restart gdm3
     image = pyautogui.screenshot(region=(x+200, y+100, width-350, height-200))
     
     # # para Windows:
