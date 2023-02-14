@@ -70,13 +70,17 @@ def save_screenshot():
     y = root.winfo_rooty()
     width = root.winfo_width()
     height = root.winfo_height()
-    # # Crea una imagen a partir de la ventana actual
-    # image = ImageGrab.grab((x, y, x + width, y + height))
-
     
-    dx = (width-750)/2
+    # # para ubuntu:
+    # # Crea una imagen a partir de la ventana actual
+    # # 1. $ sudo nano /etc/gdm3/custom.conf
+    # # 2. $ WaylandEnable=false
+    image = pyautogui.screenshot(region=(x+200, y+100, width-350, height-200))
+    
+    # # para Windows:
     # Crea una imagen a partir de la ventana actual
-    image = ImageGrab.grab((x+dx+200, y+100, x+dx+600, y + 500))
+    # dx = (width-750)/2
+    # image = ImageGrab.grab((x+dx+200, y+100, x+dx+600, y + 500))
 
     # Guarda la imagen en un archivo
     texto = str(text_frame_grafica.get("1.0",'end-1c'))
