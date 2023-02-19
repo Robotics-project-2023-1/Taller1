@@ -4,61 +4,75 @@ from geometry_msgs.msg import Twist    #Tipo de mensaje que se publicara al topi
 from pynput import keyboard   #LIbreria para leer teclado
 from pynput.keyboard import Key, Listener
 
-
+from std_msgs.msg import String
 
 lin = input("Introduzca la velocidad lineal: ")
 ang = input("Introduzca la velocidad angular: ")
-
 
 class Turtle_bot_teleop(Node):
 
     def __init__(self):
 
         super().__init__('turtle_bot_teleop')
-        self.publisher_ = self.create_publisher(Twist, 'turtlebot_cmdVel', 10)  # no se que poner en tamano de la fila 20
+        self.publisher_1 = self.create_publisher(Twist, 'turtlebot_cmdVel', 10)  # 
+        self.publisher_2 = self.create_publisher(String, 'turtlebot_teclas', 10)  # 
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
     def on_press(self,key):
 
-        msg = Twist()    
+        msg_cmdVel = Twist()  
+        msg_tecla = String()  
 
         try:      
 
             if key.char == "a": #adelante
-                msg.linear.x = -float(lin)
-                msg.linear.z = 0.0
-                msg.angular.z = 0.0
-                self.publisher_.publish(msg)
+
+                msg_tecla.data = "a"
+                msg_cmdVel.linear.x = -float(lin)
+                msg_cmdVel.linear.z = 0.0
+                msg_cmdVel.angular.z = 0.0
+                self.publisher_1.publish(msg_cmdVel)
                 self.get_logger().info('Izquierda')
+                self.publisher_2.publish(msg_tecla)
+                self.get_logger().info('Izquierda publicada')
                 self.i += 1        
 
             elif key.char == "d": #atras
-                
-                msg.linear.x = float(lin)
-                msg.linear.z = 0.0
-                msg.angular.z = 0.0
-                self.publisher_.publish(msg)
+
+                msg_tecla.data = "d"
+                msg_cmdVel.linear.x = float(lin)
+                msg_cmdVel.linear.z = 0.0
+                msg_cmdVel.angular.z = 0.0
+                self.publisher_1.publish(msg_cmdVel)
                 self.get_logger().info('Derecha')
+                self.publisher_2.publish(msg_tecla)
+                self.get_logger().info('Derecha publicada')
                 self.i += 1
                 
             elif key.char == "l": #giro derecha
 
-                msg.linear.x = 0.0
-                msg.linear.z = 0.0
-                msg.angular.z = float(ang)
-                self.publisher_.publish(msg)
+                msg_tecla.data = "l"
+                msg_cmdVel.linear.x = 0.0
+                msg_cmdVel.linear.z = 0.0
+                msg_cmdVel.angular.z = float(ang)
+                self.publisher_1.publish(msg_cmdVel)
                 self.get_logger().info('Giro derecha')
+                self.publisher_2.publish(msg_tecla)
+                self.get_logger().info('Giro derecha publicada')
                 self.i += 1
 
             elif key.char == "k": #giro izquierda
 
-                msg.linear.x = 0.0
-                msg.linear.z = 0.0
-                msg.angular.z = -float(ang)
-                self.publisher_.publish(msg)
+                msg_tecla.data = "k"
+                msg_cmdVel.linear.x = 0.0
+                msg_cmdVel.linear.z = 0.0
+                msg_cmdVel.angular.z = -float(ang)
+                self.publisher_1.publish(msg_cmdVel)
                 self.get_logger().info('Giro izquierda')
+                self.publisher_2.publish(msg_tecla)
+                self.get_logger().info('Giro izquierda publicada')
                 self.i += 1
 
         except: 
@@ -68,11 +82,11 @@ class Turtle_bot_teleop(Node):
 
     def on_release(self, key):
 
-        msg = Twist()
-        msg.linear.x = 0.0
-        msg.linear.z = 0.0
-        msg.angular.z = 0.0
-        self.publisher_.publish(msg)
+        msg_cmdVel = Twist()
+        msg_cmdVel.linear.x = 0.0
+        msg_cmdVel.linear.z = 0.0
+        msg_cmdVel.angular.z = 0.0
+        self.publisher_1.publish(msg_cmdVel)
         self.get_logger().info('Stop')
         self.i += 1               
 
