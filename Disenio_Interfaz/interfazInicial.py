@@ -12,7 +12,7 @@ root.geometry('750x600')
 root.title("turtle_bot_teleop")
 root.configure(bg='#7aebc5')
 img = Image.open("turtlebot3.png")
-imagen = img.resize((400,400))
+imagen = img.resize((300,300))
 new_image = ImageTk.PhotoImage(imagen)
 etiqueta_imagen = tk.Label(root, image=new_image)
 # etiqueta_imagen.place(x=250,y=110)
@@ -20,7 +20,7 @@ etiqueta_imagen = tk.Label(root, image=new_image)
 ancho = 750
 alto = 600
 pos_x = 400
-pos_y = 300
+pos_y = 280
 
 ###### draw
 # canvas = Canvas(root)
@@ -44,16 +44,21 @@ y2 = pos_y + 5
 text_frame_grafica = tk.Text(root, height=1, width=25,font=("Futura", 20))
 text_frame_grafica.place(x=350,y=30)
 
-label_grafica = tk.Label(root, text="Introduce el nombre:",bg='#7aebc5',font=("Futura", 20))
+label_grafica = tk.Label(root, text="Introduce el nombre de la imagen:",bg='#7aebc5',font=("Futura", 20))
 label_grafica.place(x=0,y=32)
 
+text_frame_archivo = tk.Text(root, height=1, width=25,font=("Futura", 20))
+text_frame_archivo.place(x=350,y=80)
+
+label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 20))
+label_grafica.place(x=0,y=80)
 
 def open_file():
     file_path = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
     try:
         global image
         image = Image.open(file_path)
-        image = image.resize((400,400))
+        image = image.resize((300,300))
         render = ImageTk.PhotoImage(image)
         img = tk.Label(root, image=render)
         img.image = render
@@ -63,7 +68,7 @@ def open_file():
         messagebox.showerror("Error", "Failed to open the image.")
 
 open_file_button = tk.Button(root, text="Seleccionar Imagen", command=open_file, height=2, width=20, font=("Futura", 12))
-open_file_button.place(x=30,y=520)
+open_file_button.place(x=30,y=450)
 
 def save_screenshot():
     x = root.winfo_rootx()
@@ -91,11 +96,14 @@ def save_screenshot():
     image.save(file_path)
 
 # Crea el botón
-save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
-save_screenshot_button.place(x=30,y=450)
+save_screenshot_button = tk.Button(root, text="Tomar captura", command=save_screenshot, height=2, width=20, font=("Futura", 12))
+save_screenshot_button.place(x=30,y=520)
+
+keys_pressed = []
 
 def on_press(key):
     try:
+        keys_pressed.append(key.char)
         global x1, y1, x2, y2
         if key.char == "w":
             y1 += -av
@@ -118,6 +126,7 @@ def on_press(key):
     except AttributeError:
         print('{0} presionada'.format(
             key))
+        keys_pressed.append(str(key))
 
 def on_release(key):
     print('{0}'.format(
@@ -126,10 +135,23 @@ def on_release(key):
         # Stop listener
         return False
 
+def save_to_txt():
+    filename = text_frame_archivo.get('1.0',tk.END).strip()
+    folder_path = filedialog.askdirectory()
+    with open(folder_path + '/' + filename + ".txt", "w") as file:
+        for key in keys_pressed:
+            file.write(key + '\n')
+
+
+save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=20, font=("Futura", 12))
+save_text_button.place(x=220, y=520)
+
+
 listener = keyboard.Listener(
     on_press=on_press,
     on_release=on_release)
 listener.start()
+
 
 # Run the main loop
 root.mainloop()
