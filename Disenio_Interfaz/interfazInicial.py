@@ -68,7 +68,7 @@ def open_file():
         messagebox.showerror("Error", "Failed to open the image.")
 
 open_file_button = tk.Button(root, text="Seleccionar Imagen", command=open_file, height=2, width=20, font=("Futura", 12))
-open_file_button.place(x=30,y=450)
+open_file_button.place(x=30,y=470)
 
 def save_screenshot():
     x = root.winfo_rootx()
@@ -103,7 +103,8 @@ keys_pressed = []
 
 def on_press(key):
     try:
-        keys_pressed.append(key.char)
+        if (key.char == 'w' or key.char == 's' or key.char == 'd' or key.char == 'a'):
+            keys_pressed.append(key.char)
         global x1, y1, x2, y2
         if key.char == "w":
             y1 += -av
@@ -124,9 +125,8 @@ def on_press(key):
         print('{0} presionada'.format(
                 key.char))
     except AttributeError:
-        print('{0} presionada'.format(
-            key))
-        keys_pressed.append(str(key))
+            print('{0} presionada'.format(
+                key))
 
 def on_release(key):
     print('{0}'.format(
@@ -144,7 +144,37 @@ def save_to_txt():
 
 
 save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=20, font=("Futura", 12))
-save_text_button.place(x=220, y=520)
+save_text_button.place(x=540, y=520)
+
+def read_txt():
+    file_path = filedialog.askopenfilename()
+    with open(file_path, 'r') as file:
+        commands = [line.strip() for line in file]
+        for i in range(0,len(commands)):
+            global x1, x2, y1, y2
+            if (commands[i]) == 'w':
+                y1 += -av
+                y2 += -av
+                canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue') 
+
+            if (commands[i]) == 's':
+                y1 += av
+                y2 += av
+                canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue') 
+
+            if (commands[i]) == 'a':
+                x1 += -av
+                x2 += -av
+                canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
+
+            if (commands[i]) == "d":
+                x1 += av
+                x2 += av
+                canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
+
+
+read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=20, font=("Futura", 12))
+read_movements_button.place(x= 540, y = 470)
 
 
 listener = keyboard.Listener(
