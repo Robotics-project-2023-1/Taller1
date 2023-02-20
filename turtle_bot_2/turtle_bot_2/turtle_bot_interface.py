@@ -11,6 +11,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist    #Tipo de mensaje que se publica el topico turtlebot_position
 from threading import Thread  #Crear threads para correr dos cosas simultaneamente
 from time import sleep
+#from turtlebot_interfaces.srv import Recibir_nombre
 
 posiciones = [0,0]
 
@@ -55,8 +56,14 @@ def creo_interfaz():
     text_frame_grafica = tk.Text(root, height=1, width=25,font=("Futura", 20))
     text_frame_grafica.place(x=350,y=30)
 
-    label_grafica = tk.Label(root, text="Introduce el nombre:",bg='#7aebc5',font=("Futura", 20))
+    label_grafica = tk.Label(root, text="Introduce el nombre de la imagen:",bg='#7aebc5',font=("Futura", 20))
     label_grafica.place(x=0,y=32)
+
+    text_frame_archivo = tk.Text(root, height=1, width=25,font=("Futura", 20))
+    text_frame_archivo.place(x=350,y=80)
+
+    label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 20))
+    label_grafica.place(x=0,y=80)
 
     def open_file(): 
         file_path = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
@@ -99,10 +106,28 @@ def creo_interfaz():
         texto = str(text_frame_grafica.get("1.0",'end-1c'))
         file_path = filedialog.asksaveasfilename(defaultextension=".png", initialfile= texto + ".png", filetypes=(("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
         image.save(file_path)
-
-    # Crea el botón
+    
+    def read_txt():
+        # solicitar servicio con el nombre del archivo
+        file_path = filedialog.askopenfilename()
+        pass
+    
+    def save_to_txt():
+        #filename = text_frame_archivo.get('1.0',tk.END).strip()
+        #folder_path = filedialog.askdirectory()
+        #with open(folder_path + '/' + filename + ".txt", "w") as file:
+            #for key in keys_pressed:
+                #file.write(key + '\n')
+        pass
+        # Crear botones
     save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
     save_screenshot_button.place(x=30,y=450)
+
+    save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=20, font=("Futura", 12))
+    save_text_button.place(x=540, y=520)
+
+    read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=20, font=("Futura", 12))
+    read_movements_button.place(x= 540, y = 470)
     print("AAAAAAAA")
     #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
@@ -113,41 +138,49 @@ def creo_interfaz():
         root.update_idletasks() #estos 2 comandos reemplazan el root.mainloop()
         root.update()
         
-            
-    
+quiero_txt = True          
 
 
-
-class MinimalSubscriber(Node):
+class Turtle_bot_interface(Node):
     
     def __init__(self):
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        
+        #self.cli = self.create_client(Recibir_nombre, 'recibir_nombre')
+        #while not self.cli.wait_for_service(timeout_sec=1.0):
+        #    self.get_logger().info('service not available, waiting again...')
+        #if quiero_txt == True:
+        #    self.req = Recibir_nombre.Request()
+ 
+    #def send_request(self, a, b):
+    #    self.req.nombre = a
+    #    self.req.b = b
+    #    self.future = self.cli.call_async(self.req)
+    #    rclpy.spin_until_future_complete(self, self.future)
+    #    return self.future.result()
 
     def listener_callback(self, msg):
         #print("listener")
         posiciones[0]  = msg.linear.x #datos requeridos
         posiciones[1] = msg.linear.y
         
-    
+nombre_txt = "PRUEBA.txt" 
 
 def main(args=None):
     
     rclpy.init(args=args)
     t = Thread(target=creo_interfaz) #inicia un segundo hilo en el cual va a correr la interfaz
     t.start()
-    minimal_subscriber = MinimalSubscriber()
-
-    rclpy.spin(minimal_subscriber)
+    turtle_bot_interface = Turtle_bot_interface()
+    rclpy.spin(turtle_bot_interface)
+    #response = turtle_bot_interface.send_request(nombre_txt)
+    #turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
     #event = Event()
     t.join()
-    minimal_subscriber.destroy_node()
+    turtle_bot_interface.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-
 
