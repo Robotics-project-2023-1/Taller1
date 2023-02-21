@@ -18,10 +18,14 @@ from turtlebot_interfaces.srv import Reproducir #servicio
 global quiero_txt
 quiero_txt = False
 nombre_txt = None 
+guardar_movimientos = False
+filename = None
+folder_path = None
 
 posiciones = [0,0]
 tecla_presionada = '.'
 keys_pressed = []
+
 
 def creo_interfaz():
     print("Creo la interfaz")
@@ -129,14 +133,14 @@ def creo_interfaz():
             quiero_txt = False
     
     def save_to_txt(): #PONER LO DE LEER TECLAS
+        global guardar_movimientos
+        global filename
+        global folder_path
+        print("nombre archivo")
         filename = text_frame_archivo.get('1.0',tk.END).strip()
         folder_path = filedialog.askdirectory()
-        with open(folder_path + '/' + filename + ".txt", "w") as file:
-            print("archivo abeirto")
-            for key in keys_pressed:
-                print("key pressed")
-                file.write(key + '\n')
-        
+        guardar_movimientos = True        
+
         # Crear botones
     save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
     save_screenshot_button.place(x=30,y=450)
@@ -170,8 +174,8 @@ class Turtle_bot_interface(Node):
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback2, 10) #nodo se suscribe a turtlebot_teclas
-        self.subscription  # prevent unused variable warning
+        #self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback2, 10) #nodo se suscribe a turtlebot_teclas
+        #self.subscription  # prevent unused variable warning
         # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
         
         self.cli = self.create_client(Reproducir, 'reproducir')
@@ -179,7 +183,16 @@ class Turtle_bot_interface(Node):
         while not self.cli.wait_for_service(timeout_sec=2.0):
                 self.get_logger().info('service not available, waiting again...')
         
-            
+    def on_press(self,key):
+        global guardar_movimientos 
+        if guardar_movimientos == True:
+            with open(folder_path + '/' + filename + ".txt", "w") as file:
+                print("archivo abierto y guardando")
+                file.write(key + '\n')
+
+
+    def on_release(self,key):
+        pass
         
     def send_request(self, nombre_txt):
         global quiero_txt
@@ -199,6 +212,7 @@ class Turtle_bot_interface(Node):
             quiero_txt = False
 
     def listener_callback(self, msg):
+        print("escuchando")
         global quiero_txt
         global nombre_txt
         #print("listener")
@@ -208,11 +222,17 @@ class Turtle_bot_interface(Node):
             print("voy a mandar request")
             self.send_request(nombre_txt)
             quiero_txt = False
+        #with keyboard.Listener(
+        #        on_press=self.on_press,
+        #        on_release=self.on_release) as listener:
+        #    listener.join()
 
-    def listener_callback2(self, msg):
+
+    #def listener_callback2(self, msg):
         # print(msg.data)
-        tecla_presionada = msg.data
-        keys_pressed.append(tecla_presionada)
+     #   tecla_presionada = msg.data
+     #  keys_pressed.append(tecla_presionada)
+        
         
 
 def main(args=None):

@@ -83,7 +83,7 @@ class Turtle_bot_player(Node):
                     msg_cmdVel.angular.z = -float(ang)
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Giro izquierda')
-
+                    
             ejecutar = False
         else:
             pass
