@@ -9,14 +9,18 @@ import os # para acceder a los archivos de la carpeta
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist    #Tipo de mensaje que se publica el topico turtlebot_position
+from std_msgs.msg import String
 from threading import Thread  #Crear threads para correr dos cosas simultaneamente
 from time import sleep
 from turtlebot_interfaces.srv import Reproducir #servicio
 
-global quiero_txt
 
+global quiero_txt
+quiero_txt = True
  
 posiciones = [0,0]
+tecla_presionada = '.'
+keys_pressed = []
 
 def creo_interfaz():
     print("Creo la interfaz")
@@ -112,15 +116,22 @@ def creo_interfaz():
     
     def read_txt():
         # solicitar servicio con el nombre del archivo
-        file_path = filedialog.askopenfilename()
+        try:
+            file_path = filedialog.askopenfilename()
+            nombre_txt = os.path.basename(file_path)
+            print(nombre_txt)
+            return nombre_txt
+            quiero_txt = True
+        except:
+            quiero_txt = False
         pass
     
     def save_to_txt(): #PONER LO DE LEER TECLAS
-        #filename = text_frame_archivo.get('1.0',tk.END).strip()
-        #folder_path = filedialog.askdirectory()
-        #with open(folder_path + '/' + filename + ".txt", "w") as file:
-            #for key in keys_pressed:
-                #file.write(key + '\n')
+        filename = text_frame_archivo.get('1.0',tk.END).strip()
+        folder_path = filedialog.askdirectory()
+        with open(folder_path + '/' + filename + ".txt", "w") as file:
+            for key in keys_pressed:
+                file.write(key + '\n')
         pass
         # Crear botones
     save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
@@ -138,9 +149,11 @@ def creo_interfaz():
     #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
     while True:
-        print(posiciones[0]) #este dato esta actualizad con el valor que lee el nodo suscriptor
+        xd = (posiciones[0]+2.27)*88.3+200
+        yd = ((posiciones[1]+2.27)*88.3-402.5)*(-1)+95
+        # print('x: '+str(xd)+', y: '+str(yd)) 
         sleep(0.5) #creo que es mejor quitar esto, solo es para que no muriera mi computador
-        canvas.create_rectangle(x1, y1, x2+posiciones[0], y2, fill='blue', outline='blue')
+        canvas.create_rectangle(xd, yd, xd+2, yd+2, fill='blue', outline='blue')
         root.update_idletasks() #estos 2 comandos reemplazan el root.mainloop()
         root.update()
         
@@ -152,7 +165,9 @@ class Turtle_bot_interface(Node):
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
+        self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback2, 10) #nodo se suscribe a turtlebot_teclas
+        self.subscription  # prevent unused variable warning
+        # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
         if quiero_txt == True:  #ESTE ES EL BOOLEANO QUE ACTIVA EL SERVICIO
             self.cli = self.create_client(Reproducir, 'reproducir')
             print("cliente creado")
@@ -181,6 +196,10 @@ class Turtle_bot_interface(Node):
         #print("listener")
         posiciones[0]  = msg.linear.x #datos requeridos
         posiciones[1] = msg.linear.y
+    def listener_callback2(self, msg):
+        # print(msg.data)
+        tecla_presionada = msg.data
+        keys_pressed.append(tecla_presionada)
         
 nombre_txt = "PRUEBA.txt" 
 
