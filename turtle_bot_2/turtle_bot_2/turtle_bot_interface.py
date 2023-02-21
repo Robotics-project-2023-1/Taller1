@@ -18,7 +18,7 @@ posiciones = [0,0]
 def creo_interfaz():
     print("Creo la interfaz")
     root = tk.Tk()
-    root.geometry('750x600')
+    root.geometry('950x600')
     root.title("turtle_bot_teleop")
     root.configure(bg='#7aebc5')
     name = "gato"
@@ -30,9 +30,9 @@ def creo_interfaz():
     new_image = ImageTk.PhotoImage(imagen)
     etiqueta_imagen = tk.Label(root, image=new_image)
     etiqueta_imagen.place(x=250,y=110)
-    ancho = 750
+    ancho = 950
     alto = 600
-    pos_x = 400
+    pos_x = 470
     pos_y = 300
 
     ###### draw
@@ -54,13 +54,13 @@ def creo_interfaz():
     y2 = pos_y + 5
 
     text_frame_grafica = tk.Text(root, height=1, width=25,font=("Futura", 20))
-    text_frame_grafica.place(x=350,y=30)
+    text_frame_grafica.place(x=480,y=30)
 
     label_grafica = tk.Label(root, text="Introduce el nombre de la imagen:",bg='#7aebc5',font=("Futura", 20))
     label_grafica.place(x=0,y=32)
 
     text_frame_archivo = tk.Text(root, height=1, width=25,font=("Futura", 20))
-    text_frame_archivo.place(x=350,y=80)
+    text_frame_archivo.place(x=480,y=80)
 
     label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 20))
     label_grafica.place(x=0,y=80)
@@ -70,7 +70,7 @@ def creo_interfaz():
         try:
             global image
             image = Image.open(file_path)
-            image = image.resize((400,400))
+            image = image.resize((300,300))
             render = ImageTk.PhotoImage(image)
             img = tk.Label(root, image=render)
             img.image = render
@@ -121,14 +121,14 @@ def creo_interfaz():
         pass
         # Crear botones
     save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
-    save_screenshot_button.place(x=30,y=450)
+    save_screenshot_button.place(x=30,y=470)
 
     save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=20, font=("Futura", 12))
-    save_text_button.place(x=540, y=520)
+    save_text_button.place(x=700, y=520)
 
     read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=20, font=("Futura", 12))
-    read_movements_button.place(x= 540, y = 470)
-    print("AAAAAAAA")
+    read_movements_button.place(x= 700, y = 450)
+
     #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
     while True:
