@@ -165,7 +165,24 @@ def creo_interfaz():
         root.update_idletasks() #estos 2 comandos reemplazan el root.mainloop()
         root.update()
         
+'''
+def leo_teclas():
+    global guardar_movimientos 
+    global filename
+    def on_press(key):       
+        if guardar_movimientos == True:
+            with open(folder_path + '/' + filename + ".txt", "w") as file:
+                print("archivo abierto y guardando")
+                file.write(key + '\n')
 
+
+    def on_release(key):
+        pass
+
+    with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
+        listener.join()
+        
+'''
 
 class Turtle_bot_interface(Node):
     
@@ -174,8 +191,8 @@ class Turtle_bot_interface(Node):
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        #self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback2, 10) #nodo se suscribe a turtlebot_teclas
-        #self.subscription  # prevent unused variable warning
+        self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback, 10) #nodo se suscribe a turtlebot_teclas
+        self.subscription  # prevent unused variable warning
         # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
         
         self.cli = self.create_client(Reproducir, 'reproducir')
@@ -183,16 +200,6 @@ class Turtle_bot_interface(Node):
         while not self.cli.wait_for_service(timeout_sec=2.0):
                 self.get_logger().info('service not available, waiting again...')
         
-    def on_press(self,key):
-        global guardar_movimientos 
-        if guardar_movimientos == True:
-            with open(folder_path + '/' + filename + ".txt", "w") as file:
-                print("archivo abierto y guardando")
-                file.write(key + '\n')
-
-
-    def on_release(self,key):
-        pass
         
     def send_request(self, nombre_txt):
         global quiero_txt
@@ -212,7 +219,7 @@ class Turtle_bot_interface(Node):
             quiero_txt = False
 
     def listener_callback(self, msg):
-        print("escuchando")
+        #print("escuchando")
         global quiero_txt
         global nombre_txt
         #print("listener")
@@ -222,16 +229,12 @@ class Turtle_bot_interface(Node):
             print("voy a mandar request")
             self.send_request(nombre_txt)
             quiero_txt = False
-        #with keyboard.Listener(
-        #        on_press=self.on_press,
-        #        on_release=self.on_release) as listener:
-        #    listener.join()
-
+        print(msg.data)
+        tecla_presionada = msg.data
+        keys_pressed.append(tecla_presionada)
+        
 
     #def listener_callback2(self, msg):
-        # print(msg.data)
-     #   tecla_presionada = msg.data
-     #  keys_pressed.append(tecla_presionada)
         
         
 
@@ -240,6 +243,7 @@ def main(args=None):
     rclpy.init(args=args)
     t = Thread(target=creo_interfaz) #inicia un segundo hilo en el cual va a correr la interfaz
     t.start()
+    #t2 = Thread(target=leo_taclas) #inicia un tercer hilo para leer las teclas
     turtle_bot_interface = Turtle_bot_interface() 
     #turtle_bot_interface.send_request(nombre_txt)
     #turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
