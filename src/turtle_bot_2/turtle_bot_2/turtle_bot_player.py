@@ -5,8 +5,8 @@ from geometry_msgs.msg import Twist    #Tipo de mensaje que se publicara al topi
 from turtlebot_interfaces.srv import Reproducir  #Importar el servicio Reproducir
 
 
-#lin = input("Introduzca la velocidad lineal: ")
-#ang = input("Introduzca la velocidad angular: ")
+lin = 10
+ang = 10
 
 # este nodo levanta el servicio y mueve el robot segun el archivo dado, sin embargo, para llamar el servicio, se debe llamar desde la interfaz o desde 
 # la terminal con ros service call
@@ -42,7 +42,7 @@ class Turtle_bot_player(Node):
         if ejecutar == True: #variable de control para que solo se ejecute una vez el archivo 
             msg_cmdVel = Twist()  
             archivo = os.path.dirname(__file__)
-            f = os.path.expanduser(archivo + '/' + name + '.txt')
+            f = os.path.expanduser(archivo + '/' + name )
             with open(f) as text:
                 lines = [line.rstrip() for line in text]
 
@@ -56,8 +56,7 @@ class Turtle_bot_player(Node):
                     msg_cmdVel.linear.z = 0.0
                     msg_cmdVel.angular.z = 0.0
                     self.publisher_1.publish(msg_cmdVel)
-                    self.get_logger().info('Izquierda')
-                    self.i += 1        
+                    self.get_logger().info('Izquierda')   
 
                 elif carac == "d": #derecha
 
@@ -66,7 +65,7 @@ class Turtle_bot_player(Node):
                     msg_cmdVel.angular.z = 0.0
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Derecha')
-                    self.i += 1
+
                     
                 elif carac == "l": #giro derecha
 
@@ -75,7 +74,7 @@ class Turtle_bot_player(Node):
                     msg_cmdVel.angular.z = float(ang)
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Giro derecha')
-                    self.i += 1
+
 
                 elif carac == "k": #giro izquierda
 
@@ -84,7 +83,7 @@ class Turtle_bot_player(Node):
                     msg_cmdVel.angular.z = -float(ang)
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Giro izquierda')
-                    self.i += 1
+
             ejecutar = False
         else:
             pass

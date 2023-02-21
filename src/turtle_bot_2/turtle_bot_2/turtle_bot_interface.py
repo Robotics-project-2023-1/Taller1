@@ -16,8 +16,9 @@ from turtlebot_interfaces.srv import Reproducir #servicio
 
 
 global quiero_txt
-quiero_txt = True
- 
+quiero_txt = False
+nombre_txt = None 
+
 posiciones = [0,0]
 tecla_presionada = '.'
 keys_pressed = []
@@ -116,23 +117,26 @@ def creo_interfaz():
     
     def read_txt():
         # solicitar servicio con el nombre del archivo
+        global quiero_txt
+        global nombre_txt
         try:
             file_path = filedialog.askopenfilename()
             nombre_txt = os.path.basename(file_path)
             print(nombre_txt)
-            return nombre_txt
-            quiero_txt = True
+            quiero_txt = True 
+            print("en funcion read_txt pasa a ser True")     
         except:
             quiero_txt = False
-        pass
     
     def save_to_txt(): #PONER LO DE LEER TECLAS
         filename = text_frame_archivo.get('1.0',tk.END).strip()
         folder_path = filedialog.askdirectory()
         with open(folder_path + '/' + filename + ".txt", "w") as file:
+            print("archivo abeirto")
             for key in keys_pressed:
+                print("key pressed")
                 file.write(key + '\n')
-        pass
+        
         # Crear botones
     save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
     save_screenshot_button.place(x=30,y=450)
@@ -162,46 +166,54 @@ def creo_interfaz():
 class Turtle_bot_interface(Node):
     
     def __init__(self):
+        global quiero_txt
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
         self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback2, 10) #nodo se suscribe a turtlebot_teclas
         self.subscription  # prevent unused variable warning
         # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
-        if quiero_txt == True:  #ESTE ES EL BOOLEANO QUE ACTIVA EL SERVICIO
-            self.cli = self.create_client(Reproducir, 'reproducir')
-            print("cliente creado")
-            while not self.cli.wait_for_service(timeout_sec=2.0):
-                    self.get_logger().info('service not available, waiting again...')
+        
+        self.cli = self.create_client(Reproducir, 'reproducir')
+        print("cliente creado")
+        while not self.cli.wait_for_service(timeout_sec=2.0):
+                self.get_logger().info('service not available, waiting again...')
+        
             
         
     def send_request(self, nombre_txt):
-        print("funcion mandar request")
-        nombre_txt = "PRUEBA.txt"
-        request = Reproducir.Request()
-        request.nombre = nombre_txt
-        future = self.cli.call_async(request)
-        rclpy.spin_until_future_complete(self, future)
-        if future.result() is not None:
-            response = future.result()
-            if response.respuesta:
-                print("SIUUUU, PONER ALGO EN LA INTERFAZ QUE DIGA COMO 'EJECUTANDO' O ALGO ASI")
+        global quiero_txt
+        if quiero_txt == True:  #ESTE ES EL BOOLEANO QUE ACTIVA EL SERVICIO
+            self.request = Reproducir.Request()
+            self.request.nombre = nombre_txt
+            self.future = self.cli.call_async(self.request)
+            rclpy.spin_until_future_complete(self, self.future)
+            if self.future.result() is not None:
+                response = self.future.result()
+                if response.respuesta:
+                    print("SIUUUU, PONER ALGO EN LA INTERFAZ QUE DIGA COMO 'EJECUTANDO' O ALGO ASI")
+                else:
+                    print("NOUUU")
             else:
-                print("NOUUU")
-        else:
-            self.get_logger().error('Service call failed')
-        
+                self.get_logger().error('Service call failed')
+            quiero_txt = False
 
     def listener_callback(self, msg):
+        global quiero_txt
+        global nombre_txt
         #print("listener")
         posiciones[0]  = msg.linear.x #datos requeridos
         posiciones[1] = msg.linear.y
+        if quiero_txt == True:
+            print("voy a mandar request")
+            self.send_request(nombre_txt)
+            quiero_txt = False
+
     def listener_callback2(self, msg):
         # print(msg.data)
         tecla_presionada = msg.data
         keys_pressed.append(tecla_presionada)
         
-nombre_txt = "PRUEBA.txt" 
 
 def main(args=None):
     
@@ -209,8 +221,7 @@ def main(args=None):
     t = Thread(target=creo_interfaz) #inicia un segundo hilo en el cual va a correr la interfaz
     t.start()
     turtle_bot_interface = Turtle_bot_interface() 
-    print("voy a mandar request")
-    turtle_bot_interface.send_request(nombre_txt)
+    #turtle_bot_interface.send_request(nombre_txt)
     #turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
     rclpy.spin(turtle_bot_interface)
     t.join()
@@ -219,4 +230,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
