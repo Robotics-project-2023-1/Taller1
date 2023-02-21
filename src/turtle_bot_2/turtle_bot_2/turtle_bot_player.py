@@ -41,9 +41,10 @@ class Turtle_bot_player(Node):
         global ejecutar
         if ejecutar == True: #variable de control para que solo se ejecute una vez el archivo 
             msg_cmdVel = Twist()  
-            archivo = os.path.dirname(__file__)
-            f = os.path.expanduser(archivo + '/' + name )
-            with open(f) as text:
+            #archivo = os.path.dirname(__file__)
+            #f = os.path.expanduser(archivo + '/' + name )
+            #archivo = '\home\robotica\turtle_bot_2\src\turtle_bot_2\turtle_bot_2'
+            with open(name) as text:
                 lines = [line.rstrip() for line in text]
 
             for i in range(len(lines)):

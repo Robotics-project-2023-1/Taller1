@@ -125,7 +125,8 @@ def creo_interfaz():
         global nombre_txt
         try:
             file_path = filedialog.askopenfilename()
-            nombre_txt = os.path.basename(file_path)
+            nombre = os.path.basename(file_path)
+            nombre_txt = file_path 
             print(nombre_txt)
             quiero_txt = True 
             print("en funcion read_txt pasa a ser True")     
@@ -157,6 +158,8 @@ def creo_interfaz():
     #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
     while True:
+        print("dibujando")
+        print(posiciones)
         xd = (posiciones[0]+2.27)*88.3+200
         yd = ((posiciones[1]+2.27)*88.3-402.5)*(-1)+95
         # print('x: '+str(xd)+', y: '+str(yd)) 
@@ -191,8 +194,8 @@ class Turtle_bot_interface(Node):
         super().__init__('turtle_bot_interface')
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback, 10) #nodo se suscribe a turtlebot_teclas
-        self.subscription  # prevent unused variable warning
+        #self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback, 10) #nodo se suscribe a turtlebot_teclas
+        #self.subscription  # prevent unused variable warning
         # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
         
         self.cli = self.create_client(Reproducir, 'reproducir')
@@ -229,9 +232,9 @@ class Turtle_bot_interface(Node):
             print("voy a mandar request")
             self.send_request(nombre_txt)
             quiero_txt = False
-        print(msg.data)
-        tecla_presionada = msg.data
-        keys_pressed.append(tecla_presionada)
+        #print(msg.data)
+        #tecla_presionada = msg.data
+        #keys_pressed.append(tecla_presionada)
         
 
     #def listener_callback2(self, msg):
