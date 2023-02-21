@@ -11,13 +11,8 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist    #Tipo de mensaje que se publica el topico turtlebot_position
 from threading import Thread  #Crear threads para correr dos cosas simultaneamente
 from time import sleep
-import sys
- 
-# adding Folder_2/subfolder to the system path
-#sys.path.insert(0, '/home/robotica/turtle_bot_2/src/turtlebot_interfaces/srv')
- 
-# importing the hello
-from turtlebot_interfaces.srv import Reproducir
+from turtlebot_interfaces.srv import Reproducir #servicio
+
 global quiero_txt
 
  
@@ -120,7 +115,7 @@ def creo_interfaz():
         file_path = filedialog.askopenfilename()
         pass
     
-    def save_to_txt():
+    def save_to_txt(): #PONER LO DE LEER TECLAS
         #filename = text_frame_archivo.get('1.0',tk.END).strip()
         #folder_path = filedialog.askdirectory()
         #with open(folder_path + '/' + filename + ".txt", "w") as file:
@@ -136,6 +131,9 @@ def creo_interfaz():
 
     read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=20, font=("Futura", 12))
     read_movements_button.place(x= 540, y = 470)
+
+    #QUE ESTA VAINA DEVUELVA EL NOMBRE DEL ARCHIVO Y ACTIVE UN BOOLEANO PARA LLAMAR AL SERVICIO
+
     #print("AAAAAAAA")
     #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
@@ -152,24 +150,32 @@ class Turtle_bot_interface(Node):
     
     def __init__(self):
         super().__init__('turtle_bot_interface')
-        #self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
-        #self.subscription  # prevent unused variable warning
-        quiero_txt = True
-        nombre = "BLA"
-        if quiero_txt == True:
-            print("pedir servicio")
+        self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
+        self.subscription  # prevent unused variable warning
+        quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
+        if quiero_txt == True:  #ESTE ES EL BOOLEANO QUE ACTIVA EL SERVICIO
             self.cli = self.create_client(Reproducir, 'reproducir')
+            print("cliente creado")
             while not self.cli.wait_for_service(timeout_sec=2.0):
                     self.get_logger().info('service not available, waiting again...')
-            #if quiero_txt == True:
-            self.req = Reproducir.Request()
-            quiero_txt = False
-    
-    def send_request(self, nombre):
-        self.req.nombre = nombre
-        self.future = self.cli.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
-        return self.future.result()
+            
+        
+    def send_request(self, nombre_txt):
+        print("funcion mandar request")
+        nombre_txt = "PRUEBA.txt"
+        request = Reproducir.Request()
+        request.nombre = nombre_txt
+        future = self.cli.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            response = future.result()
+            if response.respuesta:
+                print("SIUUUU, PONER ALGO EN LA INTERFAZ QUE DIGA COMO 'EJECUTANDO' O ALGO ASI")
+            else:
+                print("NOUUU")
+        else:
+            self.get_logger().error('Service call failed')
+        
 
     def listener_callback(self, msg):
         #print("listener")
@@ -183,10 +189,11 @@ def main(args=None):
     rclpy.init(args=args)
     t = Thread(target=creo_interfaz) #inicia un segundo hilo en el cual va a correr la interfaz
     t.start()
-    turtle_bot_interface = Turtle_bot_interface()
+    turtle_bot_interface = Turtle_bot_interface() 
+    print("voy a mandar request")
+    turtle_bot_interface.send_request(nombre_txt)
+    #turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
     rclpy.spin(turtle_bot_interface)
-    response = turtle_bot_interface.send_request(nombre_txt)
-    turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
     t.join()
     turtle_bot_interface.destroy_node()
     rclpy.shutdown()
