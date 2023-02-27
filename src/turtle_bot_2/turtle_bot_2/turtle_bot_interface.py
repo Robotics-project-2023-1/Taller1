@@ -30,7 +30,7 @@ keys_pressed = []
 def creo_interfaz():
     print("Creo la interfaz")
     root = tk.Tk()
-    root.geometry('750x600')
+    root.geometry('850x600')
     root.title("turtle_bot_teleop")
     root.configure(bg='#7aebc5')
     name = "gato"
@@ -42,7 +42,7 @@ def creo_interfaz():
     new_image = ImageTk.PhotoImage(imagen)
     etiqueta_imagen = tk.Label(root, image=new_image)
     etiqueta_imagen.place(x=250,y=110)
-    ancho = 750
+    ancho = 800
     alto = 600
     pos_x = 400
     pos_y = 300
@@ -65,17 +65,17 @@ def creo_interfaz():
     x2 = pos_x + 5
     y2 = pos_y + 5
 
-    text_frame_grafica = tk.Text(root, height=1, width=25,font=("Futura", 20))
-    text_frame_grafica.place(x=350,y=30)
+    text_frame_grafica = tk.Text(root, height=1, width=25,font=("Futura", 15))
+    text_frame_grafica.place(x=350,y=26)
 
-    label_grafica = tk.Label(root, text="Introduce el nombre de la imagen:",bg='#7aebc5',font=("Futura", 20))
-    label_grafica.place(x=0,y=32)
+    label_grafica = tk.Label(root, text="Introduce el nombre de la imagen:",bg='#7aebc5',font=("Futura", 15))
+    label_grafica.place(x=0,y=26)
 
-    text_frame_archivo = tk.Text(root, height=1, width=25,font=("Futura", 20))
-    text_frame_archivo.place(x=350,y=80)
+    text_frame_archivo = tk.Text(root, height=1, width=25,font=("Futura", 15))
+    text_frame_archivo.place(x=350,y=65)
 
-    label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 20))
-    label_grafica.place(x=0,y=80)
+    label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 15))
+    label_grafica.place(x=0,y=65)
 
     def open_file(): 
         file_path = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
@@ -91,8 +91,8 @@ def creo_interfaz():
         except:
             messagebox.showerror("Error", "Failed to open the image.")
 
-    open_file_button = tk.Button(root, text="Seleccionar Imagen", command=open_file, height=2, width=20, font=("Futura", 12))
-    open_file_button.place(x=30,y=520)
+    open_file_button = tk.Button(root, text="Seleccionar Imagen", command=open_file, height=2, width=17, font=("Futura", 11))
+    open_file_button.place(x=10,y=520)
 
     def save_screenshot():
         x = root.winfo_rootx()
@@ -107,7 +107,7 @@ def creo_interfaz():
         # # 2. $ WaylandEnable=false
         # # 3. guardar los cambios
         # # 4. $ sudo systemctl restart gdm3
-        image = pyautogui.screenshot(region=(x+200, y+100, width-350, height-200))
+        image = pyautogui.screenshot(region=(x+200, y+100, width-400, height-200))
         
         # # para Windows:
         # Crea una imagen a partir de la ventana actual
@@ -140,17 +140,21 @@ def creo_interfaz():
         print("nombre archivo")
         filename = text_frame_archivo.get('1.0',tk.END).strip()
         folder_path = filedialog.askdirectory()
-        guardar_movimientos = True        
+        guardar_movimientos = True
+        with open(folder_path + '/' + filename + ".txt", "w") as file:
+            for key in keys_pressed:
+                file.write(key + '\n')
+        pass
 
         # Crear botones
-    save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=1, width=15, font=("Futura", 12))
-    save_screenshot_button.place(x=30,y=450)
+    save_screenshot_button = tk.Button(root, text="Tomar pantalla", command=save_screenshot, height=2, width=17, font=("Futura", 11))
+    save_screenshot_button.place(x=10,y=450)
 
-    save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=20, font=("Futura", 12))
-    save_text_button.place(x=540, y=520)
+    save_text_button = tk.Button(root, text="Guardar movimientos", command = save_to_txt, height=2, width=19, font=("Futura", 11))
+    save_text_button.place(x=620, y=520)
 
-    read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=20, font=("Futura", 12))
-    read_movements_button.place(x= 540, y = 470)
+    read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=19, font=("Futura", 11))
+    read_movements_button.place(x= 620, y = 450)
 
     #QUE ESTA VAINA DEVUELVA EL NOMBRE DEL ARCHIVO Y ACTIVE UN BOOLEANO PARA LLAMAR AL SERVICIO
 
@@ -163,7 +167,7 @@ def creo_interfaz():
         xd = (posiciones[0]+2.27)*88.3+200
         yd = ((posiciones[1]+2.27)*88.3-402.5)*(-1)+95
         # print('x: '+str(xd)+', y: '+str(yd)) 
-        sleep(0.5) #creo que es mejor quitar esto, solo es para que no muriera mi computador
+        sleep(0.2) #creo que es mejor quitar esto, solo es para que no muriera mi computador
         canvas.create_rectangle(xd, yd, xd+2, yd+2, fill='blue', outline='blue')
         root.update_idletasks() #estos 2 comandos reemplazan el root.mainloop()
         root.update()
@@ -192,10 +196,10 @@ class Turtle_bot_interface(Node):
     def __init__(self):
         global quiero_txt
         super().__init__('turtle_bot_interface')
-        self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback, 10) #nodo se suscribe a turtlebot_position
+        self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback_posicion, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
-        #self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback, 10) #nodo se suscribe a turtlebot_teclas
-        #self.subscription  # prevent unused variable warning
+        self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback_teclas, 10) #nodo se suscribe a turtlebot_teclas
+        self.subscription  # prevent unused variable warning
         # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
         
         self.cli = self.create_client(Reproducir, 'reproducir')
@@ -221,7 +225,7 @@ class Turtle_bot_interface(Node):
                 self.get_logger().error('Service call failed')
             quiero_txt = False
 
-    def listener_callback(self, msg):
+    def listener_callback_posicion(self, msg):
         #print("escuchando")
         global quiero_txt
         global nombre_txt
@@ -232,12 +236,11 @@ class Turtle_bot_interface(Node):
             print("voy a mandar request")
             self.send_request(nombre_txt)
             quiero_txt = False
-        #print(msg.data)
-        #tecla_presionada = msg.data
-        #keys_pressed.append(tecla_presionada)
-        
-
-    #def listener_callback2(self, msg):
+            
+    def listener_callback_teclas(self, msg):
+        # print(msg.data)
+        tecla_presionada = msg.data
+        keys_pressed.append(tecla_presionada)
         
         
 
