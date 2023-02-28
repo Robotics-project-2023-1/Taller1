@@ -25,6 +25,7 @@ class Turtle_bot_player(Node):
         self.srv = self.create_service(Reproducir, 'reproducir', self.service_callback) #crear servicio
         self.get_logger().info('Service server ready')
 
+
     def service_callback(self, request, response):
         global ejecutar
         global name
@@ -32,7 +33,6 @@ class Turtle_bot_player(Node):
         self.get_logger().info('Incoming request\na:' + request.nombre)
         name = request.nombre #nombre del archivo a ejecutar
         print(name)
-        ejecutar = True
         response.respuesta = True 
         return response
 
@@ -50,11 +50,10 @@ class Turtle_bot_player(Node):
             for i in range(len(lines)):
                 
                 carac = lines[i]
-
+                print(carac)
                 if carac == "a": #izquierda
 
                     msg_cmdVel.linear.x = -float(lin)
-                    msg_cmdVel.linear.z = 0.0
                     msg_cmdVel.angular.z = 0.0
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Izquierda')   
@@ -62,7 +61,6 @@ class Turtle_bot_player(Node):
                 elif carac == "d": #derecha
 
                     msg_cmdVel.linear.x = float(lin)
-                    msg_cmdVel.linear.z = 0.0
                     msg_cmdVel.angular.z = 0.0
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Derecha')
@@ -71,7 +69,6 @@ class Turtle_bot_player(Node):
                 elif carac == "l": #giro derecha
 
                     msg_cmdVel.linear.x = 0.0
-                    msg_cmdVel.linear.z = 0.0
                     msg_cmdVel.angular.z = float(ang)
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Giro derecha')
@@ -80,12 +77,16 @@ class Turtle_bot_player(Node):
                 elif carac == "k": #giro izquierda
 
                     msg_cmdVel.linear.x = 0.0
-                    msg_cmdVel.linear.z = 0.0
                     msg_cmdVel.angular.z = -float(ang)
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Giro izquierda')
+
                     
             ejecutar = False
+            msg_cmdVel.linear.x = 0.0
+            self.publisher_1.publish(msg_cmdVel)
+            self.get_logger().info('Parar')
+            #self.srv = self.create_service(Reproducir, 'reproducir', self.service_callback) #crear servicio
         else:
             pass
 
