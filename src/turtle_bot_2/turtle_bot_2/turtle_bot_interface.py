@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as tk #libreria para crear la interfaz
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import Canvas
@@ -9,7 +9,7 @@ import os # para acceder a los archivos de la carpeta
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist    #Tipo de mensaje que se publica el topico turtlebot_position
-from std_msgs.msg import String
+from std_msgs.msg import String. #Tipo de mensaje recibido en el topico turtle_bot_teclas
 from threading import Thread  #Crear threads para correr dos cosas simultaneamente
 from time import sleep
 from turtlebot_interfaces.srv import Reproducir #servicio
@@ -21,14 +21,12 @@ nombre_txt = None
 guardar_movimientos = False
 filename = None
 folder_path = None
-
 posiciones = [0,0]
 tecla_presionada = '.'
 keys_pressed = []
 
 
-def creo_interfaz():
-    print("Creo la interfaz")
+def creo_interfaz(): #esta funcion corre como un segundo hilo
     root = tk.Tk()
     root.geometry('850x600')
     root.title("turtle_bot_teleop")
@@ -47,17 +45,10 @@ def creo_interfaz():
     pos_x = 400
     pos_y = 300
 
-    ###### draw
-        # canvas = Canvas(root)
     canvas = Canvas(root, width = ancho, height = alto)
     canvas.configure(bg='#7aebc5')
     canvas.pack()
 
-        # canvas.create_image(10,10,anchor=tk.NW,image=new_image)
-
-        # img = Image.open("gato.png")
-        # imagen = img.resize((400,400))
-        # new_image = ImageTk.PhotoImage(imagen)
     canvas.create_image(pos_x,pos_y,image=new_image)
 
     x1 = pos_x
@@ -77,7 +68,7 @@ def creo_interfaz():
     label_grafica = tk.Label(root, text="Introduce el nombre del archivo:",bg='#7aebc5',font=("Futura", 15))
     label_grafica.place(x=0,y=65)
 
-    def open_file(): 
+    def open_file(): #si se desea cambiar la imagen de fondo de interfaz 
         file_path = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
         try:
             global image
@@ -94,7 +85,7 @@ def creo_interfaz():
     open_file_button = tk.Button(root, text="Seleccionar Imagen", command=open_file, height=2, width=17, font=("Futura", 11))
     open_file_button.place(x=10,y=520)
 
-    def save_screenshot():
+    def save_screenshot(): #si se desea guardar un pantallazo de la interfaz en su estado actual
         x = root.winfo_rootx()
         y = root.winfo_rooty()
         width = root.winfo_width()
@@ -119,30 +110,26 @@ def creo_interfaz():
         file_path = filedialog.asksaveasfilename(defaultextension=".png", initialfile= texto + ".png", filetypes=(("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All Files", "*.*")))
         image.save(file_path)
     
-    def read_txt():
-        # solicitar servicio con el nombre del archivo
-        global quiero_txt
-        global nombre_txt
+    def read_txt(): # al solicitar el servicio de reproducir un archivo
+        global quiero_txt #variable de control para solicitar el servicio
+        global nombre_txt 
         try:
             file_path = filedialog.askopenfilename()
             nombre = os.path.basename(file_path)
-            nombre_txt = file_path 
-            print(nombre_txt)
-            quiero_txt = True 
-            print("en funcion read_txt pasa a ser True")     
+            nombre_txt = file_path #string con el path para acceder al archivo deseado
+            quiero_txt = True    
         except:
             quiero_txt = False
     
-    def save_to_txt(): #PONER LO DE LEER TECLAS
+    def save_to_txt(): #en caso de solicitar un txt con las teclas presionadas
         global guardar_movimientos
         global filename
         global folder_path
-        print("nombre archivo")
         filename = text_frame_archivo.get('1.0',tk.END).strip()
         folder_path = filedialog.askdirectory()
         guardar_movimientos = True
         with open(folder_path + '/' + filename + ".txt", "w") as file:
-            for key in keys_pressed:
+            for key in keys_pressed: #keys pressed se ha guardado desde que inicio a correr la interfaz
                 file.write(key + '\n')
         pass
 
@@ -156,40 +143,16 @@ def creo_interfaz():
     read_movements_button = tk.Button(root, text="Reproducir movimientos", command = read_txt, height=2, width=19, font=("Futura", 11))
     read_movements_button.place(x= 620, y = 450)
 
-    #QUE ESTA VAINA DEVUELVA EL NOMBRE DEL ARCHIVO Y ACTIVE UN BOOLEANO PARA LLAMAR AL SERVICIO
-
-    #print("AAAAAAAA")
-    #canvas.create_rectangle(x1, y1, x2, y2, fill='blue', outline='blue')
            
     while True:
-        print("dibujando")
-        print(posiciones)
+        print(posiciones) #visualizar por terminal la posicion actual del robot
         xd = (posiciones[0]+2.27)*88.3+200
         yd = ((posiciones[1]+2.27)*88.3-402.5)*(-1)+95
-        # print('x: '+str(xd)+', y: '+str(yd)) 
-        sleep(0.2) #creo que es mejor quitar esto, solo es para que no muriera mi computador
+        sleep(0.1) 
         canvas.create_rectangle(xd, yd, xd+2, yd+2, fill='blue', outline='blue')
         root.update_idletasks() #estos 2 comandos reemplazan el root.mainloop()
         root.update()
         
-'''
-def leo_teclas():
-    global guardar_movimientos 
-    global filename
-    def on_press(key):       
-        if guardar_movimientos == True:
-            with open(folder_path + '/' + filename + ".txt", "w") as file:
-                print("archivo abierto y guardando")
-                file.write(key + '\n')
-
-
-    def on_release(key):
-        pass
-
-    with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
-        listener.join()
-        
-'''
 
 class Turtle_bot_interface(Node):
     
@@ -199,26 +162,24 @@ class Turtle_bot_interface(Node):
         self.subscription = self.create_subscription(Twist, 'turtlebot_position', self.listener_callback_posicion, 10) #nodo se suscribe a turtlebot_position
         self.subscription  # prevent unused variable warning
         self.subscription = self.create_subscription(String, 'turtlebot_teclas', self.listener_callback_teclas, 10) #nodo se suscribe a turtlebot_teclas
-        self.subscription  # prevent unused variable warning
-        # quiero_txt = True #ESTO SE DEBE DEFINIR EN EL BOTON DEL TXT Y TAMBIEN SE DEBE ALMACENAR EL NOMBRE DEL TXT COMO nombre_txt
-        
-        self.cli = self.create_client(Reproducir, 'reproducir')
+        self.subscription  # prevent unused variable warning       
+        self.cli = self.create_client(Reproducir, 'reproducir') #crear cliente para el servicio Reproducir
         print("cliente creado")
-        while not self.cli.wait_for_service(timeout_sec=2.0):
+        while not self.cli.wait_for_service(timeout_sec=2.0): #buscar si el servicio esta disponible
                 self.get_logger().info('service not available, waiting again...')
         
         
     def send_request(self, nombre_txt):
         global quiero_txt
-        if quiero_txt == True:  #ESTE ES EL BOOLEANO QUE ACTIVA EL SERVICIO
-            self.request = Reproducir.Request()
-            self.request.nombre = nombre_txt
+        if quiero_txt == True:  #Booleano que activa el servicio
+            self.request = Reproducir.Request() #solicitar servicio
+            self.request.nombre = nombre_txt #mandar la ubicacion del archivo como string
             self.future = self.cli.call_async(self.request)
             rclpy.spin_until_future_complete(self, self.future)
             if self.future.result() is not None:
                 response = self.future.result()
                 if response.respuesta:
-                    print("SIUUUU, PONER ALGO EN LA INTERFAZ QUE DIGA COMO 'EJECUTANDO' O ALGO ASI")
+                    print("Ejecutando")
                 else:
                     print("NOUUU")
             else:
@@ -226,21 +187,18 @@ class Turtle_bot_interface(Node):
             quiero_txt = False
 
     def listener_callback_posicion(self, msg):
-        #print("escuchando")
         global quiero_txt
         global nombre_txt
-        #print("listener")
-        posiciones[0]  = msg.linear.x #datos requeridos
+        posiciones[0]  = msg.linear.x #datos de posicion actualizandose 
         posiciones[1] = msg.linear.y
         if quiero_txt == True:
             print("voy a mandar request")
-            self.send_request(nombre_txt)
+            self.send_request(nombre_txt) #solicitar servicio 
             quiero_txt = False
             
-    def listener_callback_teclas(self, msg):
-        # print(msg.data)
+    def listener_callback_teclas(self, msg): # lee las teclas que se presionan en el nodo turtle_bot_teleop
         tecla_presionada = msg.data
-        keys_pressed.append(tecla_presionada)
+        keys_pressed.append(tecla_presionada) #almacena las teclas en una lista para despues guardarlas en un txt de ser necesario
         
         
 
@@ -248,12 +206,9 @@ def main(args=None):
     
     rclpy.init(args=args)
     t = Thread(target=creo_interfaz) #inicia un segundo hilo en el cual va a correr la interfaz
-    t.start()
-    #t2 = Thread(target=leo_taclas) #inicia un tercer hilo para leer las teclas
-    turtle_bot_interface = Turtle_bot_interface() 
-    #turtle_bot_interface.send_request(nombre_txt)
-    #turtle_bot_interface.get_logger().info('Resultado: %d' % (response.respuesta))
-    rclpy.spin(turtle_bot_interface)
+    t.start() #inicia la interfaz
+    turtle_bot_interface = Turtle_bot_interface() #inica el nodo
+    rclpy.spin(turtle_bot_interface) 
     t.join()
     turtle_bot_interface.destroy_node()
     rclpy.shutdown()
