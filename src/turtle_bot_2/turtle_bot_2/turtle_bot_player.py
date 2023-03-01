@@ -8,9 +8,7 @@ from turtlebot_interfaces.srv import Reproducir  #Importar el servicio Reproduci
 lin = 10
 ang = 10
 
-# este nodo levanta el servicio y mueve el robot segun el archivo dado, sin embargo, para llamar el servicio, se debe llamar desde la interfaz o desde 
-# la terminal con ros service call
-
+# este nodo levanta el servicio y mueve el robot segun el archivo dado
 #El servicio recibe un str que es el nombre del archivo y retorna un booleano si se pudo ejecutar
 
 name = None
@@ -30,9 +28,8 @@ class Turtle_bot_player(Node):
         global ejecutar
         global name
         print("recibir nombre")
-        self.get_logger().info('Incoming request\na:' + request.nombre)
+        self.get_logger().info('Incoming request\na:' + request.nombre) #lee el string con la ubicacion del archivo txt
         name = request.nombre #nombre del archivo a ejecutar
-        print(name)
         response.respuesta = True 
         return response
 
@@ -40,10 +37,8 @@ class Turtle_bot_player(Node):
         global name
         global ejecutar
         if ejecutar == True: #variable de control para que solo se ejecute una vez el archivo 
-            msg_cmdVel = Twist()  
-            #archivo = os.path.dirname(__file__)
-            #f = os.path.expanduser(archivo + '/' + name )
-            #archivo = '\home\robotica\turtle_bot_2\src\turtle_bot_2\turtle_bot_2'
+            msg_cmdVel = Twist() 
+            
             with open(name) as text:
                 lines = [line.rstrip() for line in text]
 
@@ -51,14 +46,14 @@ class Turtle_bot_player(Node):
                 
                 carac = lines[i]
                 print(carac)
-                if carac == "a": #izquierda
+                if carac == "a": #eje x negatuvo
 
                     msg_cmdVel.linear.x = -float(lin)
                     msg_cmdVel.angular.z = 0.0
                     self.publisher_1.publish(msg_cmdVel)
                     self.get_logger().info('Izquierda')   
 
-                elif carac == "d": #derecha
+                elif carac == "d": #eje x positivo
 
                     msg_cmdVel.linear.x = float(lin)
                     msg_cmdVel.angular.z = 0.0
@@ -83,10 +78,11 @@ class Turtle_bot_player(Node):
 
                     
             ejecutar = False
+            #dejar de mover una vez se termina de leer el archivo
             msg_cmdVel.linear.x = 0.0
+            msg_cmdVel.angular.z = 0.0
             self.publisher_1.publish(msg_cmdVel)
             self.get_logger().info('Parar')
-            #self.srv = self.create_service(Reproducir, 'reproducir', self.service_callback) #crear servicio
         else:
             pass
 
@@ -94,9 +90,8 @@ def main(args=None):
 
     rclpy.init(args=args)
     turtle_bot_player = Turtle_bot_player()
-    timer = turtle_bot_player.create_timer(1.0, turtle_bot_player.mover) #timer para el publisher
+    timer = turtle_bot_player.create_timer(1.0, turtle_bot_player.mover) 
     rclpy.spin(turtle_bot_player)
-    #turtle_bot_player.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
