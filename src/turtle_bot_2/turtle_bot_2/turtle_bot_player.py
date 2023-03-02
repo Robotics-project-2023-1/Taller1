@@ -31,6 +31,7 @@ class Turtle_bot_player(Node):
         self.get_logger().info('Incoming request\na:' + request.nombre) #lee el string con la ubicacion del archivo txt
         name = request.nombre #nombre del archivo a ejecutar
         response.respuesta = True 
+        ejecutar = True
         return response
 
     def mover(self):
