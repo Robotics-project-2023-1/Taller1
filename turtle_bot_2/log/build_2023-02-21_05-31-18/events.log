@@ -1,0 +1,258 @@
+[0.000000] (-) TimerEvent: {}
+[0.000466] (turtlebot_interfaces) JobQueued: {'identifier': 'turtlebot_interfaces', 'dependencies': OrderedDict()}
+[0.000504] (turtle_bot_2) JobQueued: {'identifier': 'turtle_bot_2', 'dependencies': OrderedDict([('turtlebot_interfaces', '/home/robotica/turtle_bot_2/install/turtlebot_interfaces')])}
+[0.000534] (turtlebot_interfaces) JobStarted: {'identifier': 'turtlebot_interfaces'}
+[0.040047] (turtlebot_interfaces) JobProgress: {'identifier': 'turtlebot_interfaces', 'progress': 'cmake'}
+[0.043099] (turtlebot_interfaces) JobProgress: {'identifier': 'turtlebot_interfaces', 'progress': 'build'}
+[0.044601] (turtlebot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robotica/turtle_bot_2/build/turtlebot_interfaces', '--', '-j1', '-l1'], 'cwd': '/home/robotica/turtle_bot_2/build/turtlebot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robotica'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/robotica'), ('OLDPWD', '/home/robotica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1525'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'robotica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robotica'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/robotica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/robotica-VirtualBox:@/tmp/.ICE-unix/1506,unix/robotica-VirtualBox:/tmp/.ICE-unix/1506'), ('Coppelia_Root', '$/home/robotica/Downloads/Coppelia'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8e759e45_108a_4b25_bc9f_9f0651a02035'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.202'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robotica/turtle_bot_2/build/turtlebot_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.100260] (-) TimerEvent: {}
+[0.168079] (turtlebot_interfaces) StdoutLine: {'line': b'[  3%] Built target turtlebot_interfaces_srv__cpp\n'}
+[0.204013] (-) TimerEvent: {}
+[0.208061] (turtlebot_interfaces) StdoutLine: {'line': b'[ 12%] Built target turtlebot_interfaces_srv__rosidl_typesupport_introspection_cpp\n'}
+[0.262848] (turtlebot_interfaces) StdoutLine: {'line': b'[ 22%] Built target turtlebot_interfaces_srv__rosidl_typesupport_cpp\n'}
+[0.304046] (turtlebot_interfaces) StdoutLine: {'line': b'[ 32%] Built target turtlebot_interfaces_srv__rosidl_generator_c\n'}
+[0.304202] (-) TimerEvent: {}
+[0.359831] (turtlebot_interfaces) StdoutLine: {'line': b'[ 41%] Built target turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_c\n'}
+[0.399217] (turtlebot_interfaces) StdoutLine: {'line': b'[ 51%] Built target turtlebot_interfaces_srv__rosidl_typesupport_introspection_c\n'}
+[0.404469] (-) TimerEvent: {}
+[0.452079] (turtlebot_interfaces) StdoutLine: {'line': b'[ 61%] Built target turtlebot_interfaces_srv__rosidl_typesupport_c\n'}
+[0.496319] (turtlebot_interfaces) StdoutLine: {'line': b'[ 70%] Built target turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cpp\n'}
+[0.504579] (-) TimerEvent: {}
+[0.546302] (turtlebot_interfaces) StdoutLine: {'line': b'[ 70%] Built target turtlebot_interfaces_srv\n'}
+[0.601907] (turtlebot_interfaces) StdoutLine: {'line': b'[ 70%] Built target ament_cmake_python_copy_turtlebot_interfaces\n'}
+[0.608005] (-) TimerEvent: {}
+[0.711361] (-) TimerEvent: {}
+[0.815987] (-) TimerEvent: {}
+[0.916343] (-) TimerEvent: {}
+[1.024120] (-) TimerEvent: {}
+[1.124556] (-) TimerEvent: {}
+[1.226546] (-) TimerEvent: {}
+[1.324043] (turtlebot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.328013] (-) TimerEvent: {}
+[1.328338] (turtlebot_interfaces) StdoutLine: {'line': b'writing turtlebot_interfaces.egg-info/PKG-INFO\n'}
+[1.328962] (turtlebot_interfaces) StdoutLine: {'line': b'writing dependency_links to turtlebot_interfaces.egg-info/dependency_links.txt\n'}
+[1.329910] (turtlebot_interfaces) StdoutLine: {'line': b'writing top-level names to turtlebot_interfaces.egg-info/top_level.txt\n'}
+[1.351983] (turtlebot_interfaces) StdoutLine: {'line': b"reading manifest file 'turtlebot_interfaces.egg-info/SOURCES.txt'\n"}
+[1.361726] (turtlebot_interfaces) StdoutLine: {'line': b"writing manifest file 'turtlebot_interfaces.egg-info/SOURCES.txt'\n"}
+[1.435052] (-) TimerEvent: {}
+[1.539386] (-) TimerEvent: {}
+[1.560793] (turtlebot_interfaces) StdoutLine: {'line': b'[ 70%] Built target ament_cmake_python_build_turtlebot_interfaces_egg\n'}
+[1.639501] (-) TimerEvent: {}
+[1.651300] (turtlebot_interfaces) StdoutLine: {'line': b'[ 74%] Built target turtlebot_interfaces_srv__py\n'}
+[1.715945] (turtlebot_interfaces) StdoutLine: {'line': b'[ 80%] Built target turtlebot_interfaces_srv__rosidl_generator_py\n'}
+[1.740314] (-) TimerEvent: {}
+[1.817291] (turtlebot_interfaces) StdoutLine: {'line': b'[ 87%] Built target turtlebot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.843312] (-) TimerEvent: {}
+[1.916280] (turtlebot_interfaces) StdoutLine: {'line': b'[ 93%] Built target turtlebot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.948018] (-) TimerEvent: {}
+[2.000070] (turtlebot_interfaces) StdoutLine: {'line': b'[100%] Built target turtlebot_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.043086] (turtlebot_interfaces) CommandEnded: {'returncode': 0}
+[2.048239] (-) TimerEvent: {}
+[2.154686] (-) TimerEvent: {}
+[2.264086] (-) TimerEvent: {}
+[2.339761] (turtlebot_interfaces) JobProgress: {'identifier': 'turtlebot_interfaces', 'progress': 'install'}
+[2.366023] (-) TimerEvent: {}
+[2.384396] (turtlebot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robotica/turtle_bot_2/build/turtlebot_interfaces'], 'cwd': '/home/robotica/turtle_bot_2/build/turtlebot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robotica'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/robotica'), ('OLDPWD', '/home/robotica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1525'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'robotica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robotica'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/robotica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/robotica-VirtualBox:@/tmp/.ICE-unix/1506,unix/robotica-VirtualBox:/tmp/.ICE-unix/1506'), ('Coppelia_Root', '$/home/robotica/Downloads/Coppelia'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8e759e45_108a_4b25_bc9f_9f0651a02035'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.202'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robotica/turtle_bot_2/build/turtlebot_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.410394] (turtlebot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.410743] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/rosidl_interfaces/turtlebot_interfaces\n'}
+[2.413228] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.413525] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.413730] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.413910] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__struct.h\n'}
+[2.415962] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__functions.h\n'}
+[2.417259] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__functions.c\n'}
+[2.417447] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.h\n'}
+[2.417606] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/reproducir.h\n'}
+[2.417779] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg\n'}
+[2.417954] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.418182] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/library_path.sh\n'}
+[2.419578] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/library_path.dsv\n'}
+[2.422422] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_generator_c.so\n'}
+[2.424320] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.424540] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.424754] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.424965] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_fastrtps_c.h\n'}
+[2.425143] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg\n'}
+[2.427638] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.432211] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.432707] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.432905] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.433096] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.433333] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_introspection_c.h\n'}
+[2.433637] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.c\n'}
+[2.436009] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg\n'}
+[2.436247] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.436614] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.437072] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_c.so\n'}
+[2.437407] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.437631] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.437798] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.437966] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__builder.hpp\n'}
+[2.440062] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__traits.hpp\n'}
+[2.440399] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__struct.hpp\n'}
+[2.440619] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/reproducir.hpp\n'}
+[2.444076] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.446580] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.446853] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.447073] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/dds_fastrtps\n'}
+[2.447703] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.447967] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg\n'}
+[2.448171] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.448545] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.451085] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces\n'}
+[2.451310] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv\n'}
+[2.451505] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail\n'}
+[2.451978] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.452144] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.cpp\n'}
+[2.456064] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.456660] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.459214] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/pythonpath.sh\n'}
+[2.459493] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/pythonpath.dsv\n'}
+[2.459690] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info\n'}
+[2.459929] (turtlebot_interfaces) StdoutLine: {'line': b'-- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.460266] (turtlebot_interfaces) StdoutLine: {'line': b'-- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.460553] (turtlebot_interfaces) StdoutLine: {'line': b'-- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.460828] (turtlebot_interfaces) StdoutLine: {'line': b'-- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.461172] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces\n'}
+[2.464184] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.464493] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.464662] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv\n'}
+[2.464868] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/_reproducir.py\n'}
+[2.465036] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/__init__.py\n'}
+[2.465580] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/_reproducir_s.c\n'}
+[2.470044] (-) TimerEvent: {}
+[2.481397] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/libturtlebot_interfaces_srv__rosidl_generator_py.so\n'}
+[2.481694] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.481894] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.482064] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.483226] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/__init__.py\n'}
+[2.484219] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[2.570841] (-) TimerEvent: {}
+[2.624400] (turtlebot_interfaces) StdoutLine: {'line': b"Listing '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces'...\n"}
+[2.624613] (turtlebot_interfaces) StdoutLine: {'line': b"Listing '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv'...\n"}
+[2.648079] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.648958] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.652033] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.652616] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces_srv__rosidl_generator_py.so\n'}
+[2.652983] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir.idl\n'}
+[2.653190] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir.srv\n'}
+[2.653419] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir_Request.msg\n'}
+[2.653607] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir_Response.msg\n'}
+[2.653821] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/package_run_dependencies/turtlebot_interfaces\n'}
+[2.656044] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/parent_prefix_path/turtlebot_interfaces\n'}
+[2.656389] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/ament_prefix_path.sh\n'}
+[2.660051] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.660363] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/path.sh\n'}
+[2.660600] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/path.dsv\n'}
+[2.660822] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.bash\n'}
+[2.661014] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.sh\n'}
+[2.661219] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.zsh\n'}
+[2.664036] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.dsv\n'}
+[2.664363] (turtlebot_interfaces) StdoutLine: {'line': b'-- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.dsv\n'}
+[2.664712] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/packages/turtlebot_interfaces\n'}
+[2.664981] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cExport.cmake\n'}
+[2.665204] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.665460] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.665690] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.667992] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.668229] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.668514] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cExport.cmake\n'}
+[2.670563] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.670998] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cppExport.cmake\n'}
+[2.671109] (-) TimerEvent: {}
+[2.671462] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.671691] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.673564] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.676129] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.676836] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cppExport.cmake\n'}
+[2.678264] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.678610] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_pyExport.cmake\n'}
+[2.678816] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.679017] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.680358] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.684317] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.688527] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.692066] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.692509] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.692719] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.692979] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfacesConfig.cmake\n'}
+[2.693073] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfacesConfig-version.cmake\n'}
+[2.693644] (turtlebot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.xml\n'}
+[2.712018] (turtlebot_interfaces) CommandEnded: {'returncode': 0}
+[2.778303] (-) TimerEvent: {}
+[2.880478] (-) TimerEvent: {}
+[2.980811] (-) TimerEvent: {}
+[3.089955] (-) TimerEvent: {}
+[3.128368] (turtlebot_interfaces) JobEnded: {'identifier': 'turtlebot_interfaces', 'rc': 0}
+[3.131415] (turtle_bot_2) JobStarted: {'identifier': 'turtle_bot_2'}
+[3.190113] (-) TimerEvent: {}
+[3.292636] (-) TimerEvent: {}
+[3.395187] (-) TimerEvent: {}
+[3.497331] (-) TimerEvent: {}
+[3.601532] (-) TimerEvent: {}
+[3.707041] (-) TimerEvent: {}
+[3.810627] (-) TimerEvent: {}
+[3.911024] (-) TimerEvent: {}
+[4.022974] (-) TimerEvent: {}
+[4.137666] (-) TimerEvent: {}
+[4.238115] (-) TimerEvent: {}
+[4.338488] (-) TimerEvent: {}
+[4.447996] (-) TimerEvent: {}
+[4.553820] (-) TimerEvent: {}
+[4.656000] (-) TimerEvent: {}
+[4.756385] (-) TimerEvent: {}
+[4.859995] (-) TimerEvent: {}
+[4.973227] (-) TimerEvent: {}
+[5.077441] (-) TimerEvent: {}
+[5.179992] (-) TimerEvent: {}
+[5.280383] (-) TimerEvent: {}
+[5.383426] (-) TimerEvent: {}
+[5.483811] (-) TimerEvent: {}
+[5.587261] (-) TimerEvent: {}
+[5.687667] (-) TimerEvent: {}
+[5.792007] (-) TimerEvent: {}
+[5.872727] (turtle_bot_2) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/turtle_bot_2', 'build', '--build-base', '/home/robotica/turtle_bot_2/build/turtle_bot_2/build', 'install', '--record', '/home/robotica/turtle_bot_2/build/turtle_bot_2/install.log', '--single-version-externally-managed'], 'cwd': '/home/robotica/turtle_bot_2/src/turtle_bot_2', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotica', 'LC_TIME': 'es_CO.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/robotica', 'OLDPWD': '/home/robotica', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_CO.UTF-8', 'SYSTEMD_EXEC_PID': '1525', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'robotica', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'robotica', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/robotica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/robotica-VirtualBox:@/tmp/.ICE-unix/1506,unix/robotica-VirtualBox:/tmp/.ICE-unix/1506', 'Coppelia_Root': '$/home/robotica/Downloads/Coppelia', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_CO.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8e759e45_108a_4b25_bc9f_9f0651a02035', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_CO.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.202', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/robotica/turtle_bot_2/install/turtlebot_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_CO.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_CO.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'es_CO.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/robotica/turtle_bot_2/build/turtle_bot_2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_CO.UTF-8', 'LC_PAPER': 'es_CO.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/robotica/turtle_bot_2/install/turtlebot_interfaces'}, 'shell': False}
+[5.892869] (-) TimerEvent: {}
+[6.006736] (-) TimerEvent: {}
+[6.109951] (-) TimerEvent: {}
+[6.218978] (-) TimerEvent: {}
+[6.319850] (-) TimerEvent: {}
+[6.427528] (-) TimerEvent: {}
+[6.527936] (-) TimerEvent: {}
+[6.632058] (-) TimerEvent: {}
+[6.743966] (-) TimerEvent: {}
+[6.844454] (-) TimerEvent: {}
+[6.948002] (-) TimerEvent: {}
+[7.048357] (-) TimerEvent: {}
+[7.121699] (turtle_bot_2) StdoutLine: {'line': b'running egg_info\n'}
+[7.128181] (turtle_bot_2) StdoutLine: {'line': b'writing ../../build/turtle_bot_2/turtle_bot_2.egg-info/PKG-INFO\n'}
+[7.132172] (turtle_bot_2) StdoutLine: {'line': b'writing dependency_links to ../../build/turtle_bot_2/turtle_bot_2.egg-info/dependency_links.txt\n'}
+[7.132756] (turtle_bot_2) StdoutLine: {'line': b'writing entry points to ../../build/turtle_bot_2/turtle_bot_2.egg-info/entry_points.txt\n'}
+[7.133158] (turtle_bot_2) StdoutLine: {'line': b'writing requirements to ../../build/turtle_bot_2/turtle_bot_2.egg-info/requires.txt\n'}
+[7.133519] (turtle_bot_2) StdoutLine: {'line': b'writing top-level names to ../../build/turtle_bot_2/turtle_bot_2.egg-info/top_level.txt\n'}
+[7.144805] (turtle_bot_2) StdoutLine: {'line': b"reading manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'\n"}
+[7.146569] (turtle_bot_2) StdoutLine: {'line': b"writing manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'\n"}
+[7.147018] (turtle_bot_2) StdoutLine: {'line': b'running build\n'}
+[7.148028] (turtle_bot_2) StdoutLine: {'line': b'running build_py\n'}
+[7.148481] (-) TimerEvent: {}
+[7.154862] (turtle_bot_2) StdoutLine: {'line': b'copying turtle_bot_2/turtle_bot_interface.py -> /home/robotica/turtle_bot_2/build/turtle_bot_2/build/lib/turtle_bot_2\n'}
+[7.160078] (turtle_bot_2) StdoutLine: {'line': b'running install\n'}
+[7.160443] (turtle_bot_2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.160597] (turtle_bot_2) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.161162] (turtle_bot_2) StdoutLine: {'line': b'running install_lib\n'}
+[7.164069] (turtle_bot_2) StdoutLine: {'line': b'copying /home/robotica/turtle_bot_2/build/turtle_bot_2/build/lib/turtle_bot_2/turtle_bot_interface.py -> /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2\n'}
+[7.165115] (turtle_bot_2) StdoutLine: {'line': b'byte-compiling /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2/turtle_bot_interface.py to turtle_bot_interface.cpython-310.pyc\n'}
+[7.172030] (turtle_bot_2) StdoutLine: {'line': b'running install_data\n'}
+[7.172965] (turtle_bot_2) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.184455] (turtle_bot_2) StdoutLine: {'line': b"removing '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[7.184982] (turtle_bot_2) StdoutLine: {'line': b'Copying ../../build/turtle_bot_2/turtle_bot_2.egg-info to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info\n'}
+[7.186016] (turtle_bot_2) StdoutLine: {'line': b'running install_scripts\n'}
+[7.244060] (turtle_bot_2) StdoutLine: {'line': b'Installing turtle_bot_interface script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2\n'}
+[7.244629] (turtle_bot_2) StdoutLine: {'line': b'Installing turtle_bot_player script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2\n'}
+[7.246379] (turtle_bot_2) StdoutLine: {'line': b'Installing turtle_bot_teleop script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2\n'}
+[7.247249] (turtle_bot_2) StdoutLine: {'line': b"writing list of installed files to '/home/robotica/turtle_bot_2/build/turtle_bot_2/install.log'\n"}
+[7.248605] (-) TimerEvent: {}
+[7.344125] (turtle_bot_2) CommandEnded: {'returncode': 0}
+[7.352265] (-) TimerEvent: {}
+[7.368052] (turtle_bot_2) JobEnded: {'identifier': 'turtle_bot_2', 'rc': 0}
+[7.369463] (-) EventReactorShutdown: {}

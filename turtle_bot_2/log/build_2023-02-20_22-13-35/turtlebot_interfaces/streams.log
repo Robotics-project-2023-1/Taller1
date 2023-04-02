@@ -1,0 +1,228 @@
+[0.007s] Invoking command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robotica/turtle_bot_2/src/turtlebot_interfaces -DCMAKE_INSTALL_PREFIX=/home/robotica/turtle_bot_2/install/turtlebot_interfaces
+[0.252s] -- The C compiler identification is GNU 11.3.0
+[0.397s] -- The CXX compiler identification is GNU 11.3.0
+[0.412s] -- Detecting C compiler ABI info
+[0.497s] -- Detecting C compiler ABI info - done
+[0.513s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.513s] -- Detecting C compile features
+[0.515s] -- Detecting C compile features - done
+[0.520s] -- Detecting CXX compiler ABI info
+[0.609s] -- Detecting CXX compiler ABI info - done
+[0.632s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.633s] -- Detecting CXX compile features
+[0.634s] -- Detecting CXX compile features - done
+[0.644s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.847s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.978s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.984s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.996s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.072s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.466s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.698s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.007s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.043s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+[2.046s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.081s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+[2.082s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.082s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.082s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.106s] -- Found PythonExtra: .so  
+[2.166s] -- Configuring done
+[2.201s] -- Generating done
+[2.204s] -- Build files have been written to: /home/robotica/turtle_bot_2/build/turtlebot_interfaces
+[2.213s] Invoked command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robotica/turtle_bot_2/src/turtlebot_interfaces -DCMAKE_INSTALL_PREFIX=/home/robotica/turtle_bot_2/install/turtlebot_interfaces
+[2.213s] Invoking command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robotica/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
+[2.264s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.687s] [  3%] Built target turtlebot_interfaces_srv__cpp
+[2.696s] [  6%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.065s] [  9%] [32mBuilding CXX object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtlebot_interfaces/srv/reproducir__type_support.cpp.o[0m
+[3.458s] [ 12%] [32m[1mLinking CXX shared library libturtlebot_interfaces__rosidl_typesupport_cpp.so[0m
+[3.504s] [ 12%] Built target turtlebot_interfaces_srv__rosidl_typesupport_cpp
+[3.514s] [ 16%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.962s] [ 19%] [32mBuilding C object CMakeFiles/turtlebot_interfaces_srv__rosidl_generator_c.dir/rosidl_generator_c/turtlebot_interfaces/srv/detail/reproducir__functions.c.o[0m
+[4.041s] [ 22%] [32m[1mLinking C shared library libturtlebot_interfaces__rosidl_generator_c.so[0m
+[4.077s] [ 22%] Built target turtlebot_interfaces_srv__rosidl_generator_c
+[4.087s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.509s] [ 29%] [32mBuilding CXX object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/turtlebot_interfaces/srv/detail/reproducir__type_support_c.cpp.o[0m
+[4.966s] [ 32%] [32m[1mLinking CXX shared library libturtlebot_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[5.064s] [ 32%] Built target turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_c
+[5.073s] [ 35%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.479s] [ 38%] [32mBuilding C object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtlebot_interfaces/srv/detail/reproducir__type_support.c.o[0m
+[5.521s] [ 41%] [32m[1mLinking C shared library libturtlebot_interfaces__rosidl_typesupport_introspection_c.so[0m
+[5.558s] [ 41%] Built target turtlebot_interfaces_srv__rosidl_typesupport_introspection_c
+[5.566s] [ 45%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.921s] [ 48%] [32mBuilding CXX object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot_interfaces/srv/reproducir__type_support.cpp.o[0m
+[5.964s] [ 51%] [32m[1mLinking CXX shared library libturtlebot_interfaces__rosidl_typesupport_c.so[0m
+[6.005s] [ 51%] Built target turtlebot_interfaces_srv__rosidl_typesupport_c
+[6.014s] [ 54%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.436s] [ 58%] [32mBuilding CXX object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtlebot_interfaces/srv/detail/dds_fastrtps/reproducir__type_support.cpp.o[0m
+[6.909s] [ 61%] [32m[1mLinking CXX shared library libturtlebot_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.997s] [ 61%] Built target turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cpp
+[7.006s] [ 64%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.401s] [ 67%] [32mBuilding CXX object CMakeFiles/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtlebot_interfaces/srv/detail/reproducir__type_support.cpp.o[0m
+[7.851s] [ 70%] [32m[1mLinking CXX shared library libturtlebot_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[7.917s] [ 70%] Built target turtlebot_interfaces_srv__rosidl_typesupport_introspection_cpp
+[7.935s] [ 70%] Built target turtlebot_interfaces_srv
+[7.966s] [ 70%] Built target ament_cmake_python_copy_turtlebot_interfaces
+[8.281s] running egg_info
+[8.282s] creating turtlebot_interfaces.egg-info
+[8.283s] writing turtlebot_interfaces.egg-info/PKG-INFO
+[8.283s] writing dependency_links to turtlebot_interfaces.egg-info/dependency_links.txt
+[8.283s] writing top-level names to turtlebot_interfaces.egg-info/top_level.txt
+[8.284s] writing manifest file 'turtlebot_interfaces.egg-info/SOURCES.txt'
+[8.287s] reading manifest file 'turtlebot_interfaces.egg-info/SOURCES.txt'
+[8.288s] writing manifest file 'turtlebot_interfaces.egg-info/SOURCES.txt'
+[8.314s] [ 70%] Built target ament_cmake_python_build_turtlebot_interfaces_egg
+[8.332s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[9.111s] [ 74%] Built target turtlebot_interfaces_srv__py
+[9.176s] [ 77%] [32mBuilding C object CMakeFiles/turtlebot_interfaces_srv__rosidl_generator_py.dir/rosidl_generator_py/turtlebot_interfaces/srv/_reproducir_s.c.o[0m
+[9.518s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot_interfaces/libturtlebot_interfaces_srv__rosidl_generator_py.so[0m
+[9.563s] [ 80%] Built target turtlebot_interfaces_srv__rosidl_generator_py
+[9.582s] [ 83%] [32mBuilding C object CMakeFiles/turtlebot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[9.701s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[9.734s] [ 87%] Built target turtlebot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[9.760s] [ 90%] [32mBuilding C object CMakeFiles/turtlebot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[9.901s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[9.992s] [ 93%] Built target turtlebot_interfaces__rosidl_typesupport_introspection_c__pyext
+[10.010s] [ 96%] [32mBuilding C object CMakeFiles/turtlebot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[10.119s] [100%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.152s] [100%] Built target turtlebot_interfaces__rosidl_typesupport_c__pyext
+[10.169s] Invoked command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robotica/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
+[10.304s] Invoking command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robotica/turtle_bot_2/build/turtlebot_interfaces
+[10.323s] -- Install configuration: ""
+[10.323s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/rosidl_interfaces/turtlebot_interfaces
+[10.325s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.326s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.327s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.327s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__struct.h
+[10.327s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__functions.h
+[10.328s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__functions.c
+[10.328s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.h
+[10.329s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/reproducir.h
+[10.329s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg
+[10.329s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[10.330s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/library_path.sh
+[10.330s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/library_path.dsv
+[10.331s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_generator_c.so
+[10.333s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_generator_c.so" to ""
+[10.333s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.334s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.335s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.335s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_fastrtps_c.h
+[10.335s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg
+[10.336s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.337s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_c.so
+[10.338s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[10.338s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.339s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.339s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.340s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_introspection_c.h
+[10.341s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.c
+[10.342s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg
+[10.342s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.343s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_c.so
+[10.344s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[10.344s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_c.so
+[10.345s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_c.so" to ""
+[10.346s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.347s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.347s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.347s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__builder.hpp
+[10.347s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__traits.hpp
+[10.348s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__struct.hpp
+[10.348s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/reproducir.hpp
+[10.348s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.349s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.349s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.350s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/dds_fastrtps
+[10.351s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_fastrtps_cpp.hpp
+[10.351s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg
+[10.351s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.354s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[10.357s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[10.358s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces
+[10.366s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv
+[10.366s] -- Up-to-date: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail
+[10.367s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__rosidl_typesupport_introspection_cpp.hpp
+[10.369s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/include/turtlebot_interfaces/turtlebot_interfaces/srv/detail/reproducir__type_support.cpp
+[10.369s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_cpp.so
+[10.372s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[10.372s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_cpp.so
+[10.373s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces__rosidl_typesupport_cpp.so" to ""
+[10.373s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/pythonpath.sh
+[10.374s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/pythonpath.dsv
+[10.375s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info
+[10.375s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[10.375s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[10.376s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[10.376s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[10.377s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces
+[10.377s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.378s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[10.378s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv
+[10.378s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/_reproducir.py
+[10.379s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/__init__.py
+[10.379s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/_reproducir_s.c
+[10.379s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/libturtlebot_interfaces_srv__rosidl_generator_py.so
+[10.379s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.380s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.380s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.381s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/__init__.py
+[10.382s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/_turtlebot_interfaces_s.ep.rosidl_typesupport_c.c
+[10.432s] Listing '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces'...
+[10.432s] Compiling '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/__init__.py'...
+[10.432s] Listing '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv'...
+[10.432s] Compiling '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/__init__.py'...
+[10.432s] Compiling '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/srv/_reproducir.py'...
+[10.438s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.440s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.440s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.441s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.441s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.442s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages/turtlebot_interfaces/turtlebot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.442s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces_srv__rosidl_generator_py.so
+[10.442s] -- Set runtime path of "/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/libturtlebot_interfaces_srv__rosidl_generator_py.so" to ""
+[10.443s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir.idl
+[10.443s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir.srv
+[10.444s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir_Request.msg
+[10.444s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/srv/Reproducir_Response.msg
+[10.444s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/package_run_dependencies/turtlebot_interfaces
+[10.445s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/parent_prefix_path/turtlebot_interfaces
+[10.445s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/ament_prefix_path.sh
+[10.445s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/ament_prefix_path.dsv
+[10.446s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/path.sh
+[10.446s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/environment/path.dsv
+[10.446s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.bash
+[10.447s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.sh
+[10.447s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.zsh
+[10.447s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/local_setup.dsv
+[10.448s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.dsv
+[10.448s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/ament_index/resource_index/packages/turtlebot_interfaces
+[10.448s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cExport.cmake
+[10.449s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cExport-noconfig.cmake
+[10.449s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cExport.cmake
+[10.449s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.450s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cExport.cmake
+[10.450s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.450s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cExport.cmake
+[10.451s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cExport-noconfig.cmake
+[10.451s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_cppExport.cmake
+[10.451s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.452s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.452s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cppExport.cmake
+[10.453s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.453s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cppExport.cmake
+[10.454s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfaces_srv__rosidl_typesupport_cppExport-noconfig.cmake
+[10.454s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_pyExport.cmake
+[10.454s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/export_turtlebot_interfaces_srv__rosidl_generator_pyExport-noconfig.cmake
+[10.454s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake-extras.cmake
+[10.455s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.455s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[10.456s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[10.456s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.456s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.456s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.457s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfacesConfig.cmake
+[10.457s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/cmake/turtlebot_interfacesConfig-version.cmake
+[10.457s] -- Installing: /home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.xml
+[10.467s] Invoked command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robotica/turtle_bot_2/build/turtlebot_interfaces

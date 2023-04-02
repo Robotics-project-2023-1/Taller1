@@ -1,0 +1,28 @@
+[1.645s] Invoking command in '/home/robotica/turtle_bot_2/src/turtle_bot_2': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed
+[2.322s] running egg_info
+[2.323s] writing ../../build/turtle_bot_2/turtle_bot_2.egg-info/PKG-INFO
+[2.324s] writing dependency_links to ../../build/turtle_bot_2/turtle_bot_2.egg-info/dependency_links.txt
+[2.328s] writing entry points to ../../build/turtle_bot_2/turtle_bot_2.egg-info/entry_points.txt
+[2.329s] writing requirements to ../../build/turtle_bot_2/turtle_bot_2.egg-info/requires.txt
+[2.329s] writing top-level names to ../../build/turtle_bot_2/turtle_bot_2.egg-info/top_level.txt
+[2.331s] reading manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'
+[2.335s] writing manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'
+[2.336s] running build
+[2.336s] running build_py
+[2.338s] copying turtle_bot_2/turtle_bot_interface.py -> /home/robotica/turtle_bot_2/build/turtle_bot_2/build/lib/turtle_bot_2
+[2.338s] running install
+[2.338s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.340s]   warnings.warn(
+[2.341s] running install_lib
+[2.344s] copying /home/robotica/turtle_bot_2/build/turtle_bot_2/build/lib/turtle_bot_2/turtle_bot_interface.py -> /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2
+[2.345s] byte-compiling /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2/turtle_bot_interface.py to turtle_bot_interface.cpython-310.pyc
+[2.350s] running install_data
+[2.351s] running install_egg_info
+[2.357s] removing '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info' (and everything under it)
+[2.357s] Copying ../../build/turtle_bot_2/turtle_bot_2.egg-info to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info
+[2.358s] running install_scripts
+[2.412s] Installing turtle_bot_interface script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[2.412s] Installing turtle_bot_player script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[2.413s] Installing turtle_bot_teleop script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[2.413s] writing list of installed files to '/home/robotica/turtle_bot_2/build/turtle_bot_2/install.log'
+[2.484s] Invoked command in '/home/robotica/turtle_bot_2/src/turtle_bot_2' returned '0': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed

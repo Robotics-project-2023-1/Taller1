@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtlebot_interfaces/srv/Reproducir.srv
+// generated code does not contain a copyright notice
+
+
+module turtlebot_interfaces {
+  module srv {
+    struct Reproducir_Request {
+      string nombre;
+    };
+    struct Reproducir_Response {
+      boolean respuesta;
+    };
+  };
+};

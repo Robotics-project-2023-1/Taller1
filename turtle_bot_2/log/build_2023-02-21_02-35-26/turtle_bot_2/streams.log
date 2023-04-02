@@ -1,0 +1,31 @@
+[2.801s] Invoking command in '/home/robotica/turtle_bot_2/src/turtle_bot_2': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed
+[4.368s] running egg_info
+[4.375s] writing ../../build/turtle_bot_2/turtle_bot_2.egg-info/PKG-INFO
+[4.376s] writing dependency_links to ../../build/turtle_bot_2/turtle_bot_2.egg-info/dependency_links.txt
+[4.376s] writing entry points to ../../build/turtle_bot_2/turtle_bot_2.egg-info/entry_points.txt
+[4.377s] writing requirements to ../../build/turtle_bot_2/turtle_bot_2.egg-info/requires.txt
+[4.377s] writing top-level names to ../../build/turtle_bot_2/turtle_bot_2.egg-info/top_level.txt
+[4.387s] reading manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'
+[4.393s] writing manifest file '../../build/turtle_bot_2/turtle_bot_2.egg-info/SOURCES.txt'
+[4.395s] running build
+[4.396s] running build_py
+[4.397s] running install
+[4.399s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.399s]   warnings.warn(
+[4.404s] running install_lib
+[4.411s] byte-compiling /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2/turtle_bot_interface.py to turtle_bot_interface.cpython-310.pyc
+[4.426s]   File "/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2/turtle_bot_interface.py", line 182
+[4.427s]     :awita:
+[4.427s]     ^
+[4.427s] SyntaxError: invalid syntax
+[4.427s] 
+[4.429s] running install_data
+[4.433s] running install_egg_info
+[4.439s] removing '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info' (and everything under it)
+[4.442s] Copying ../../build/turtle_bot_2/turtle_bot_2.egg-info to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages/turtle_bot_2-0.0.0-py3.10.egg-info
+[4.447s] running install_scripts
+[4.540s] Installing turtle_bot_interface script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[4.543s] Installing turtle_bot_player script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[4.543s] Installing turtle_bot_teleop script to /home/robotica/turtle_bot_2/install/turtle_bot_2/lib/turtle_bot_2
+[4.548s] writing list of installed files to '/home/robotica/turtle_bot_2/build/turtle_bot_2/install.log'
+[4.665s] Invoked command in '/home/robotica/turtle_bot_2/src/turtle_bot_2' returned '0': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed

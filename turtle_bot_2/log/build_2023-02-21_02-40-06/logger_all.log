@@ -1,0 +1,198 @@
+[1.844s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.844s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=1, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f75f7b2e290>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f75f8352b90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f75f8352b90>>)
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.968s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.968s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robotica/turtle_bot_2'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extensions ['ignore', 'ignore_ament_install']
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extension 'ignore'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extension 'ignore_ament_install'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extensions ['colcon_pkg']
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extension 'colcon_pkg'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extensions ['colcon_meta']
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extension 'colcon_meta'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extensions ['ros']
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot_2) by extension 'ros'
+[2.023s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtle_bot_2' with type 'ros.ament_python' and name 'turtle_bot_2'
+[2.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[2.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extension 'ignore'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extension 'ignore_ament_install'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extensions ['colcon_pkg']
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extension 'colcon_pkg'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extensions ['colcon_meta']
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extension 'colcon_meta'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extensions ['ros']
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot_interfaces) by extension 'ros'
+[2.035s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot_interfaces' with type 'ros.ament_cmake' and name 'turtlebot_interfaces'
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.035s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.126s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 284 installed packages in /opt/ros/humble
+[2.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_args' from command line to 'None'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_target' from command line to 'None'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[2.487s] Level 5:colcon.colcon_core.verb:set package 'turtlebot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.488s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robotica/turtle_bot_2/build/turtlebot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robotica/turtle_bot_2/install/turtlebot_interfaces', 'merge_install': False, 'path': '/home/robotica/turtle_bot_2/src/turtlebot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_args' from command line to 'None'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_target' from command line to 'None'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_clean_cache' from command line to 'False'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_clean_first' from command line to 'False'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'cmake_force_configure' from command line to 'False'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'ament_cmake_args' from command line to 'None'
+[2.504s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'catkin_cmake_args' from command line to 'None'
+[2.509s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.509s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_bot_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robotica/turtle_bot_2/build/turtle_bot_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robotica/turtle_bot_2/install/turtle_bot_2', 'merge_install': False, 'path': '/home/robotica/turtle_bot_2/src/turtle_bot_2', 'symlink_install': False, 'test_result_base': None}
+[2.510s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.541s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.542s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robotica/turtle_bot_2/src/turtlebot_interfaces' with build type 'ament_cmake'
+[2.542s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robotica/turtle_bot_2/src/turtlebot_interfaces'
+[2.582s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robotica/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
+[6.402s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robotica/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
+[6.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robotica/turtle_bot_2/build/turtlebot_interfaces
+[6.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot_interfaces)
+[6.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotica/turtle_bot_2/build/turtlebot_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robotica/turtle_bot_2/build/turtlebot_interfaces
+[6.962s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces' for CMake module files
+[6.963s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces' for CMake config files
+[6.963s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot_interfaces', 'cmake_prefix_path')
+[6.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.ps1'
+[6.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.dsv'
+[6.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.sh'
+[6.990s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib'
+[6.991s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot_interfaces', 'ld_library_path_lib')
+[6.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.ps1'
+[7.003s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.dsv'
+[7.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.sh'
+[7.010s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/bin'
+[7.010s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/pkgconfig/turtlebot_interfaces.pc'
+[7.011s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/python3.10/site-packages'
+[7.011s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/bin'
+[7.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.ps1'
+[7.021s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.dsv'
+[7.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.sh'
+[7.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.bash'
+[7.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.zsh'
+[7.037s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/colcon-core/packages/turtlebot_interfaces)
+[7.244s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot_interfaces)
+[7.254s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces' for CMake module files
+[7.256s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces' for CMake config files
+[7.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot_interfaces', 'cmake_prefix_path')
+[7.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.ps1'
+[7.265s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.dsv'
+[7.265s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/cmake_prefix_path.sh'
+[7.266s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib'
+[7.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot_interfaces', 'ld_library_path_lib')
+[7.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.ps1'
+[7.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.dsv'
+[7.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/hook/ld_library_path_lib.sh'
+[7.274s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/bin'
+[7.274s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/pkgconfig/turtlebot_interfaces.pc'
+[7.275s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib/python3.10/site-packages'
+[7.275s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/bin'
+[7.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.ps1'
+[7.294s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.dsv'
+[7.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.sh'
+[7.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.bash'
+[7.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/turtlebot_interfaces/package.zsh'
+[7.303s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotica/turtle_bot_2/install/turtlebot_interfaces/share/colcon-core/packages/turtlebot_interfaces)
+[7.307s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robotica/turtle_bot_2/src/turtle_bot_2' with build type 'ament_python'
+[7.308s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_bot_2', 'ament_prefix_path')
+[7.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/ament_prefix_path.ps1'
+[7.325s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/ament_prefix_path.dsv'
+[7.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/ament_prefix_path.sh'
+[7.337s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.338s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.435s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robotica/turtle_bot_2/src/turtle_bot_2'
+[8.443s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.443s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotica/turtle_bot_2/src/turtle_bot_2': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed
+[11.111s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2' for CMake module files
+[11.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotica/turtle_bot_2/src/turtle_bot_2' returned '0': AMENT_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces LD_LIBRARY_PATH=/home/robotica/turtle_bot_2/install/turtlebot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robotica/turtle_bot_2/build/turtle_bot_2/prefix_override:/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages:/home/robotica/turtle_bot_2/install/turtlebot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot_2 build --build-base /home/robotica/turtle_bot_2/build/turtle_bot_2/build install --record /home/robotica/turtle_bot_2/build/turtle_bot_2/install.log --single-version-externally-managed
+[11.117s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2' for CMake config files
+[11.117s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib'
+[11.117s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2/bin'
+[11.118s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/pkgconfig/turtle_bot_2.pc'
+[11.118s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2/lib/python3.10/site-packages'
+[11.118s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_bot_2', 'pythonpath')
+[11.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/pythonpath.ps1'
+[11.125s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/pythonpath.dsv'
+[11.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/hook/pythonpath.sh'
+[11.126s] Level 1:colcon.colcon_core.environment:checking '/home/robotica/turtle_bot_2/install/turtle_bot_2/bin'
+[11.127s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_bot_2)
+[11.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/package.ps1'
+[11.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/package.dsv'
+[11.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/package.sh'
+[11.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/package.bash'
+[11.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotica/turtle_bot_2/install/turtle_bot_2/share/turtle_bot_2/package.zsh'
+[11.146s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotica/turtle_bot_2/install/turtle_bot_2/share/colcon-core/packages/turtle_bot_2)
+[11.147s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.147s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.147s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.147s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.172s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.172s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.172s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.232s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.235s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotica/turtle_bot_2/install/local_setup.ps1'
+[11.244s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robotica/turtle_bot_2/install/_local_setup_util_ps1.py'
+[11.253s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotica/turtle_bot_2/install/setup.ps1'
+[11.264s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotica/turtle_bot_2/install/local_setup.sh'
+[11.268s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robotica/turtle_bot_2/install/_local_setup_util_sh.py'
+[11.276s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotica/turtle_bot_2/install/setup.sh'
+[11.284s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotica/turtle_bot_2/install/local_setup.bash'
+[11.292s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotica/turtle_bot_2/install/setup.bash'
+[11.297s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotica/turtle_bot_2/install/local_setup.zsh'
+[11.303s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotica/turtle_bot_2/install/setup.zsh'

@@ -1,0 +1,6 @@
+[0.059s] Invoking command in '/home/robotica/Desktop/Taller1/turtle_bot_2/build/turtlebot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica/Desktop/Taller1/turtle_bot_2/src/install/turtle_bot_2:/opt/ros/humble /usr/bin/cmake --build /home/robotica/Desktop/Taller1/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
+[0.073s] [0mCMake Error: The current CMakeCache.txt directory /home/robotica/Desktop/Taller1/turtle_bot_2/build/turtlebot_interfaces/CMakeCache.txt is different than the directory /home/robotica/turtle_bot_2/build/turtlebot_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.086s] [0mCMake Error: The source directory "/home/robotica/turtle_bot_2/src/turtlebot_interfaces" does not exist.
+[0.088s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.091s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.096s] Invoked command in '/home/robotica/Desktop/Taller1/turtle_bot_2/build/turtlebot_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotica/Desktop/Taller1/turtle_bot_2/src/install/turtle_bot_2:/opt/ros/humble /usr/bin/cmake --build /home/robotica/Desktop/Taller1/turtle_bot_2/build/turtlebot_interfaces -- -j1 -l1
